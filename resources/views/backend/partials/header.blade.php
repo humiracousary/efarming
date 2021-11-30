@@ -1,25 +1,30 @@
 <header class="topbar" data-navbarbg="skin5">
     <nav class="navbar top-navbar navbar-expand-md navbar-dark">
         <div class="navbar-header" data-logobg="skin6">
+
+
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
-            <a class="navbar-brand" href="dashboard.html">
+           <a class="navbar-brand" href="dashboard.html">
                 <!-- Logo icon -->
-                <b class="logo-icon">
+            <b class="logo-icon">
                     <!-- Dark Logo icon -->
-                    <img src="{{url('backend/plugins/images/logo-icon.png')}}" alt="homepage" />
+                <img src="{{url('backend/plugins/images/logo-icon.png')}}" alt="homepage" />
                 </b>
                 <!--End Logo icon -->
                 <!-- Logo text -->
-                <span class="logo-text">
+            <span class="logo-text">
                     <!-- dark Logo text -->
-                    <img src="{{url('backend/plugins/images/logo-text.png')}}" alt="homepage" />
+                <img src="{{url('backend/plugins/images/logo-text.png')}}" alt="homepage" />
                 </span>
             </a>
             <!-- ============================================================== -->
             <!-- End Logo -->
             <!-- ============================================================== -->
+
+
+
             <!-- ============================================================== -->
             <!-- toggle and nav items -->
             <!-- ============================================================== -->
@@ -39,7 +44,7 @@
                 <!-- ============================================================== -->
                 <!-- Search -->
                 <!-- ============================================================== -->
-                <li class=" in">
+               <li class=" in">
                     <form role="search" class="app-search d-none d-md-block me-3">
                         <input type="text" placeholder="Search..." class="form-control mt-0">
                         <a href="" class="active">
@@ -52,11 +57,11 @@
                 <!-- ============================================================== -->
                 <li>
                     <a class="profile-pic" href="#">
-                        <img src="{{url('backend/plugins/images/users/varun.jpg')}}" alt="user-img" width="36"
-                            class="img-circle"><span class="text-white font-medium">Steave</span></a>
+                        <img src="https://image.shutterstock.com/image-vector/agriculture-logo-on-e-letter-260nw-2043809411.jpg" alt="user-img" width="36"
+                            class="img-circle"><span class="text-white font-medium">HK E-farming Management System</span></a>
                 </li>
                 <!-- ============================================================== -->
-                <!-- User profile and search -->
+                <!-- User profile and search'backend/plugins/images/users/varun.jpg' -->
                 <!-- ============================================================== -->
             </ul>
         </div>

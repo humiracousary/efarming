@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TutorialController;
+use App\Http\Controllers\Category_listController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +21,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('backend.layout.home');
 });
+//product
+Route::get('create/product',[ProductController:: class,'createproduct'])->name('create.product');
+Route::get('product/list',[ProductController::class,'productList'])->name('product.list');
+Route::post('product/add',[ProductController::class,'add'])->name('product.add');
+
+//home
+Route::get('home',[HomeController::class,'home'])->name('home');
+
+//category
+Route::get('category/list',[Category_listController::class,'category_list'])->name('category.list');
+Route::get('category/form',[Category_listController::class,'form'])->name('category.form');
+Route::post('category/add',[Category_listController::class,'add'])->name('category.add');
+
+
+//order
+Route::get('order',[OrderController:: class,'order'])->name('order');
+
+//tutorial
+Route::get('add/tutotal',[TutorialController:: class,'addtutorial'])->name('add.tutorial');
+Route::get('tutorial/list',[TutorialController::class,'tutoriallist'])->name('tutorial.list');
+//Route::post('product/add',[ProductController::class,'add'])->name('product.add');
