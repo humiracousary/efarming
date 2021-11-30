@@ -1,3 +1,3 @@
-<footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-    href="https://www.wrappixel.com/">wrappixel.com</a>
+<footer class="footer text-center";"> <h1>FARMING IS FUN. </h1><a
+    href="https://www.facebook.com/profile.php?id=100009963649391">HUMIRA COUSARY</a>
 </footer>
