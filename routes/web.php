@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TutorialController;
@@ -42,3 +44,14 @@ Route::get('order',[OrderController:: class,'order'])->name('order');
 Route::get('add/tutotal',[TutorialController:: class,'addtutorial'])->name('add.tutorial');
 Route::get('tutorial/list',[TutorialController::class,'tutoriallist'])->name('tutorial.list');
 //Route::post('product/add',[ProductController::class,'add'])->name('product.add');
+
+
+//event
+Route::get('event/add',[EventController:: class,'addevent'])->name('add.event');
+Route::get('event/list',[EventController::class,'eventlist'])->name('event.list');
+Route::post('event',[EventController::class,'add'])->name('event.add');
+
+//user
+Route::get('user/add',[UserController:: class,'adduser'])->name('add.user');
+Route::get('user/list',[UserController::class,'userlist'])->name('user.list');
+Route::post('user',[UserController::class,'add'])->name('user.add');
