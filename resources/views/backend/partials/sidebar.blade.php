@@ -13,7 +13,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item pt-2">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('user.list')}}"
                         aria-expanded="false">
                         <i class="far fa-user" aria-hidden="true"></i>
                         <span class="hide-menu">user</span>
@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="map-google.html"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('event.list')}}"
                         aria-expanded="false">
                         <i class="fa fa-globe" aria-hidden="true"></i>
                         <span class="hide-menu">Event</span>
