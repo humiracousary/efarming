@@ -5,8 +5,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\StockController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TutorialController;
+use App\Http\Controllers\OrderdetailsController;
 use App\Http\Controllers\Category_listController;
 
 /*
@@ -40,6 +42,11 @@ Route::post('category/add',[Category_listController::class,'add'])->name('catego
 //order
 Route::get('order',[OrderController:: class,'order'])->name('order');
 
+
+//order-details
+Route::get('order/details',[OrderdetailsController:: class,'orderdetails'])->name('order-details');
+
+
 //tutorial
 Route::get('add/tutotal',[TutorialController:: class,'addtutorial'])->name('add.tutorial');
 Route::get('tutorial/list',[TutorialController::class,'tutoriallist'])->name('tutorial.list');
@@ -55,3 +62,8 @@ Route::post('event',[EventController::class,'add'])->name('event.add');
 Route::get('user/add',[UserController:: class,'adduser'])->name('add.user');
 Route::get('user/list',[UserController::class,'userlist'])->name('user.list');
 Route::post('user',[UserController::class,'add'])->name('user.add');
+
+//stock
+Route::get('stock/list',[StockController::class,'stocklist'])->name('stock.list');
+Route::get('stock/form',[StockController::class,'form'])->name('stock.form');
+Route::post('stock/add',[StockController::class,'add'])->name('stock.add');

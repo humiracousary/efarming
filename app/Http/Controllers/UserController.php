@@ -14,7 +14,8 @@ class UserController extends Controller
 
     public function userlist()
     {
-        return view('backend.pages.user-list');
+        $user=user::all();
+        return view('backend.pages.user-list',compact('user'));
     }
 
     public function add(Request $request){
