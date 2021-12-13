@@ -14,7 +14,8 @@ class EventController extends Controller
 
     public function eventlist()
     {
-        return view('backend.pages.event-list');
+        $event=event::all();
+        return view('backend.pages.event-list',compact('event'));
     }
     public function add(Request $request){
         // dd($request->all());
