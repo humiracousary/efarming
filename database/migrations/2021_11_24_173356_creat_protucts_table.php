@@ -18,6 +18,7 @@ class CreatProtuctsTable extends Migration
             $table->string('name');
             $table->double('price');
             $table->integer('quantity');
+            $table->string('image');
            // $table->integer('how much');
             $table->timestamps();
         });

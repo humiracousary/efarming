@@ -4,7 +4,7 @@
 <h1><b>ADD tutorial</b></h1>
 
 <div class="container-fluid">
-    <form action="{{route('add.tutorial')}}" method="POST">
+    <form action="{{route('tutotial.add')}}" method="post">
         @csrf
         <div class="form-group">
         <label for="exampleInputPassword1">tutorial name</label>

@@ -50,7 +50,7 @@ Route::get('order/details',[OrderdetailsController:: class,'orderdetails'])->nam
 //tutorial
 Route::get('add/tutotal',[TutorialController:: class,'addtutorial'])->name('add.tutorial');
 Route::get('tutorial/list',[TutorialController::class,'tutoriallist'])->name('tutorial.list');
-//Route::post('product/add',[ProductController::class,'add'])->name('product.add');
+Route::post('tutotial/add',[TutorialController::class,'add'])->name('tutotial.add');
 
 
 //event
