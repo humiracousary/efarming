@@ -22,6 +22,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
+                <th scope="col">image</th>
               </tr>
             </thead>
             <tbody>
@@ -31,6 +32,9 @@
                 <td>{{$data->name}}</td>
                 <td>{{$data->price}}</td>
                 <td>{{$data->quantity}}</td>
+                <td>
+                  <img width="100px" src="{{url('/upload/'.$data->image)}}" alt="product image">
+                </td>
               </tr>
               @endforeach
               

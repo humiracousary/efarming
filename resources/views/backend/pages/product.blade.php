@@ -4,7 +4,7 @@
 <h1><b>ADD PRODUCT</b></h1>
 
 <div class="container-fluid">
-    <form action="{{route('product.add')}}" method="POST">
+    <form action="{{route('product.add')}}" method="POST" enctype="multipart/form-data">
         @csrf
         
         <div class="form-group">
@@ -13,15 +13,15 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">product_price</label>
-            <input type="price" class="form-control" id="exampleInputPassword1" placeholder="price" name="price">
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="price" name="price">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">product_quantity</label>
-            <input type="" class="form-control" id="exampleInputPassword1" placeholder="how much" name="how much">
+            <input type="integer" class="form-control" id="exampleInputPassword1" placeholder="how much" name="quantity">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Product Picture</label>
-            <input name="picture" placeholder="Enter Product Price" type="file" class="form-control" id="">
+            <input name="image" placeholder="Enter Product Price" type="file" class="form-control" id="">
         </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>

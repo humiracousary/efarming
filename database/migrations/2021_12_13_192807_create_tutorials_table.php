@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTutorialTable extends Migration
+class CreateTutorialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateTutorialTable extends Migration
      */
     public function up()
     {
-        Schema::create('tutorial', function (Blueprint $table) {
+        Schema::create('tutorials', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('details');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateTutorialTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tutorial');
+        Schema::dropIfExists('tutorials');
     }
 }

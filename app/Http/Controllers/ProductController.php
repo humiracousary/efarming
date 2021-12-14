@@ -19,11 +19,24 @@ class ProductController extends Controller
 
     public function add(Request $request){
         // dd($request->all());
+
+        $filename='';
+        if ($request->hasFile('image'))
+        {
+            $file=$request->file('image');
+            $filename=date('ymdhms').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/upload',$filename);
+        }
+
         Product::create([
             'name'=>$request->name,
             'price'=>$request->price,
-            'quantity'=>$request->how_much,
+            'quantity'=>$request->quantity,
+            'image'=>$filename,
+            
         ]);
-        return redirect()->back();
-}
+        return redirect()->route('product.list');
+    
+    }
+
 }
