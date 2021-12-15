@@ -23,8 +23,19 @@ use App\Http\Controllers\Category_listController;
 */
 
 Route::get('/', function () {
+    return view('website.master');
+});
+
+
+Route::group(['prefix'=>'admin'],function(){
+
+
+
+Route::get('/', function () {
     return view('backend.layout.home');
 });
+
+
 //product
 Route::get('create/product',[ProductController:: class,'createproduct'])->name('create.product');
 Route::get('product/list',[ProductController::class,'productList'])->name('product.list');
@@ -67,3 +78,6 @@ Route::post('user',[UserController::class,'add'])->name('user.add');
 Route::get('stock/list',[StockController::class,'stocklist'])->name('stock.list');
 Route::get('stock/form',[StockController::class,'form'])->name('stock.form');
 Route::post('stock/add',[StockController::class,'add'])->name('stock.add');
+
+
+});
