@@ -8,6 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TutorialController;
+use App\Http\Controllers\MylocationController;
 use App\Http\Controllers\OrderdetailsController;
 use App\Http\Controllers\Category_listController;
 
@@ -23,10 +24,23 @@ use App\Http\Controllers\Category_listController;
 */
 
 Route::get('/', function () {
-    return view('website.master');
+    return view('website.pages.home');
 });
 
+//mylocation
+Route::get('location',[MylocationController::class,'mylocation'])->name('location.mylocation');
 
+
+
+
+//login
+Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
+Route::post('/login',[UserController::class,'login'])->name('user.login');
+Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+
+
+
+//grouping
 Route::group(['prefix'=>'admin'],function(){
 
 
@@ -69,10 +83,7 @@ Route::get('event/add',[EventController:: class,'addevent'])->name('add.event');
 Route::get('event/list',[EventController::class,'eventlist'])->name('event.list');
 Route::post('event',[EventController::class,'add'])->name('event.add');
 
-//user
-Route::get('user/add',[UserController:: class,'adduser'])->name('add.user');
-Route::get('user/list',[UserController::class,'userlist'])->name('user.list');
-Route::post('user',[UserController::class,'add'])->name('user.add');
+
 
 //stock
 Route::get('stock/list',[StockController::class,'stocklist'])->name('stock.list');

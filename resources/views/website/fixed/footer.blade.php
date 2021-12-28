@@ -69,13 +69,13 @@
                         <h4>Contact Us</h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Mazumpur,kushtia,Dhaka<br> kushtia 7000 </p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+88 01317248863</a></p>
                             </li>
                             <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">hkopola33@gmail.com</a></p>
                             </li>
                         </ul>
                     </div>
