@@ -35,25 +35,23 @@ Route::get('location',[MylocationController::class,'mylocation'])->name('locatio
 
 
 //login
-
-
 Route::get('login',[LoginController:: class,'login'])->name('admin.login');
 Route::post('do/login',[LoginController:: class,'doLogin'])->name('admin.doLogin');
+
 
 
 //grouping
 Route::group(['prefix'=>'admin','Middleware'=>'auth'],function(){
 
+
 Route::get('/', function () {
     return view('backend.layout.home');
 })->name('admin');
 
+//logout
 Route::get('logout',[LoginController:: class,'logout'])->name('admin.logout');
 
 
-
-//ligin
-// Route::get('login',[LoginController:: class,'login'])->name('admin.login');
 
 
 //product
