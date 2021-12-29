@@ -12,13 +12,13 @@
                         <span class="hide-menu">Home</span>
                     </a>
                 </li>
-                <li class="sidebar-item pt-2">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('user.list')}}"
+               <!-- <li class="sidebar-item pt-2">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href=""
                         aria-expanded="false">
                         <i class="far fa-user" aria-hidden="true"></i>
                         <span class="hide-menu">user</span>
                     </a>
-                </li>
+                </li>-->
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('product.list')}}"
                         aria-expanded="false">
