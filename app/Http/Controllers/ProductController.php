@@ -39,4 +39,50 @@ class ProductController extends Controller
     
     }
 
+
+    public function viewproduct($id)
+    {
+        $data=Product::find($id);
+        return view('backend.pages.product.product_view',compact('data'));
+
+    }
+
+    public function editProduct($id){
+        $data = Product::find($id);
+        //$categories = Category::all();
+        //$companies = Company::all();
+        return view('backend.pages.product.product_update', compact('data'));
+        
+
+    
+    }
+    public function productupdate(Request $request,$id){
+        $data = Product::find($id);
+        if ($data) {
+            $data->update([
+            'name'=>$request->name,
+            'price'=>$request->price,
+            'quantity'=>$request->quantity
+            
+
+            ]);
+            return redirect()->route('product.list')->with('success','Product Updated Successfully.');
+        }
+       
+     
+    }
+
+
+
+   public function productdelete($id){
+        $data = Product::find($id);
+
+        if ($data)
+         {
+          $data->delete();
+          return redirect()->back();
+         }  
+
+    }
+
 }
