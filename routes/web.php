@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Product;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
@@ -11,7 +13,6 @@ use App\Http\Controllers\TutorialController;
 use App\Http\Controllers\MylocationController;
 use App\Http\Controllers\OrderdetailsController;
 use App\Http\Controllers\Category_listController;
-use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ use GuzzleHttp\Middleware;
 */
 
 Route::get('/', function () {
+
     return view('website.pages.home');
 });
 
@@ -57,7 +59,14 @@ Route::get('logout',[LoginController:: class,'logout'])->name('admin.logout');
 //product
 Route::get('create/product',[ProductController:: class,'createproduct'])->name('create.product');
 Route::get('product/list',[ProductController::class,'productList'])->name('product.list');
+
+Route::get('product/view/{id}',[ProductController::class,'viewproduct'])->name('product.view');
+Route::get('product/edit/{id}',[ProductController::class,'editproduct'])->name('product.edit');
+Route::put('product/update/{id}',[ProductController::class,'productupdate'])->name('product.update');
+Route::get('product/delete/{id}',[ProductController::class,'productdelete'])->name('product.delete');
+
 Route::post('product/add',[ProductController::class,'add'])->name('product.add');
+
 
 //home
 Route::get('home',[HomeController::class,'home'])->name('home');
