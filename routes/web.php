@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WebhomeController;
 use App\Http\Controllers\TutorialController;
 use App\Http\Controllers\MylocationController;
 use App\Http\Controllers\OrderdetailsController;
@@ -25,10 +26,15 @@ use App\Http\Controllers\Category_listController;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
 
-    return view('website.pages.home');
-});
+//     return view('website.layout.webhome');
+// });
+
+
+
+//webhome
+Route::get('/',[WebhomeController::class,'webhome'])->name('webhome');
 
 //mylocation
 Route::get('location',[MylocationController::class,'mylocation'])->name('location.mylocation');
@@ -43,12 +49,19 @@ Route::post('do/login',[LoginController:: class,'doLogin'])->name('admin.doLogin
 
 
 //grouping
-Route::group(['prefix'=>'admin','Middleware'=>'auth'],function(){
+Route::group(['prefix'=>'admin','Middleware'=>['auth','admin']],function(){
 
 
 Route::get('/', function () {
     return view('backend.layout.home');
 })->name('admin');
+
+
+
+//home
+Route::get('home',[HomeController::class,'home'])->name('home');
+
+
 
 //logout
 Route::get('logout',[LoginController:: class,'logout'])->name('admin.logout');
@@ -59,17 +72,13 @@ Route::get('logout',[LoginController:: class,'logout'])->name('admin.logout');
 //product
 Route::get('create/product',[ProductController:: class,'createproduct'])->name('create.product');
 Route::get('product/list',[ProductController::class,'productList'])->name('product.list');
+Route::post('product/add',[ProductController::class,'add'])->name('product.add');
 
 Route::get('product/view/{id}',[ProductController::class,'viewproduct'])->name('product.view');
 Route::get('product/edit/{id}',[ProductController::class,'editproduct'])->name('product.edit');
 Route::put('product/update/{id}',[ProductController::class,'productupdate'])->name('product.update');
 Route::get('product/delete/{id}',[ProductController::class,'productdelete'])->name('product.delete');
 
-Route::post('product/add',[ProductController::class,'add'])->name('product.add');
-
-
-//home
-Route::get('home',[HomeController::class,'home'])->name('home');
 
 //category
 Route::get('category/list',[Category_listController::class,'category_list'])->name('category.list');

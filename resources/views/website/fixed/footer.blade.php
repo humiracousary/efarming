@@ -1,6 +1,3 @@
- 
-
-
 <!-- Start Footer  -->
  <footer>
     <div class="footer-main">
@@ -10,7 +7,7 @@
                     <div class="footer-top-box">
                         <h3>Business Time</h3>
                         <ul class="list-time">
-                            <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                            <li>saturday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
                         </ul>
                     </div>
                 </div>
@@ -72,7 +69,7 @@
                                 <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Mazumpur,kushtia,Dhaka<br> kushtia 7000 </p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+88 01317248863</a></p>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+88 018 34587000</a></p>
                             </li>
                             <li>
                                 <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">hkopola33@gmail.com</a></p>

@@ -5,15 +5,17 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="custom-select-box">
-                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+                    <!-- <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
 							<option>¥ JPY</option>
 							<option>$ USD</option>
 							<option>€ EUR</option>
-						</select>
+						</select>-->
                     </div>
+
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                        <p>Call US :- <a href="#"> +88 018 34587000</a></p>
                     </div>
+
                     <div class="our-link">
                         <ul>
                             <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
@@ -22,6 +24,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="login-box">
 						<select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
@@ -72,20 +75,28 @@
         <!-- Start Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
             <div class="container">
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
+
+
+
+
+                <!--logo
+
+                Start Header Navigation -->
+                <!--<div class="navbar-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
-                </div>
+                </div>-->
                 <!-- End Header Navigation -->
+
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">offer</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
@@ -97,8 +108,8 @@
                                 <li><a href="wishlist.html">Wishlist</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">feed back</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -110,7 +121,7 @@
                         <li class="side-menu">
 							<a href="#">
 								<i class="fa fa-shopping-bag"></i>
-								<span class="badge">3</span>
+								<!--<span class="badge">#</span>-->
 								<p>My Cart</p>
 							</a>
 						</li>
