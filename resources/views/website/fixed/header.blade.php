@@ -119,10 +119,10 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu">
-							<a href="#">
+							<a href="{{route('cart')}}">
 								<i class="fa fa-shopping-bag"></i>
 								<!--<span class="badge">#</span>-->
-								<p>My Cart</p>
+								<p>My Cart <span>{{session('cart') ? count(session('cart')) : 0}}</span></p>
 							</a>
 						</li>
                     </ul>

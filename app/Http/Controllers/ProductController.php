@@ -74,15 +74,31 @@ class ProductController extends Controller
 
 
 
-   public function productdelete($id){
+   public function productdelete($id)
+   {
         $data = Product::find($id);
 
         if ($data)
          {
           $data->delete();
           return redirect()->back();
-         }  
+         }    
+    }
 
+
+    public function productSearch(){
+        // dd(request()->all());
+        $key=null;
+        if(request()->Search){
+            $key=request()->Search;
+            $data = Product::with('category')
+                ->where('name','LIKE','%'.$key.'%')
+                ->get();
+            return view('admin.product.product',compact('products','key'));
+        }
+       
+        $data = Product::with('category')->get();
+        return view('admin.product.product',compact('products','key'));
     }
 
 }

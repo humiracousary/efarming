@@ -12,8 +12,19 @@
     <a href="{{route('create.product')}}" class="btn btn-primary">Add Product</a>
 
   </div>
+
+
     
     <div class="row">
+
+     <div class="col-md-4"></div>
+     <div class="col-md-4"></div>
+     <div class="col-md-4"><input type="text" class="from-control" name="search" placeceholeder="search here....">
+      <button class="dtn btn-primary" type="submit">Search</button>
+      </div>
+    </div>
+
+
         <div class="col-sm-2"></div>
         <div class="col-sm-8"> <table class="table">
             <thead>
@@ -43,6 +54,7 @@
                 </td>
               </tr>
               @endforeach
+
               
             </tbody>
           </table></div>
