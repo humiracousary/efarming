@@ -11,6 +11,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WebhomeController;
 use App\Http\Controllers\TutorialController;
+use App\Http\Controllers\AddtocartController;
 use App\Http\Controllers\MylocationController;
 use App\Http\Controllers\OrderdetailsController;
 use App\Http\Controllers\Category_listController;
@@ -48,6 +49,10 @@ Route::get('login',[LoginController:: class,'login'])->name('admin.login');
 Route::post('do/login',[LoginController:: class,'doLogin'])->name('admin.doLogin');
 
 
+//add to cart
+Route::get('add_to_cart/{id}',[AddtocartController:: class,'addtocart'])->name('add.cart');
+Route::get('view/add_to_cart',[AddtocartController:: class,'viewcart'])->name('cart');
+
 
 //grouping
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
@@ -79,6 +84,9 @@ Route::get('product/view/{id}',[ProductController::class,'viewproduct'])->name('
 Route::get('product/edit/{id}',[ProductController::class,'editproduct'])->name('product.edit');
 Route::put('product/update/{id}',[ProductController::class,'productupdate'])->name('product.update');
 Route::get('product/delete/{id}',[ProductController::class,'productdelete'])->name('product.delete');
+
+Route::get('product/search',[ProductController::class,'productSearch'])->name('product.search');
+
 
 
 //category
