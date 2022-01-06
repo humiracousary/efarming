@@ -14,6 +14,7 @@ use App\Http\Controllers\TutorialController;
 use App\Http\Controllers\MylocationController;
 use App\Http\Controllers\OrderdetailsController;
 use App\Http\Controllers\Category_listController;
+use App\Http\Controllers\singleproductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,8 +40,8 @@ Route::get('/',[WebhomeController::class,'webhome'])->name('webhome');
 //mylocation
 Route::get('location',[MylocationController::class,'mylocation'])->name('location.mylocation');
 
-
-
+// product
+Route::get('singleProduct/view/{id}',[singleproductController::class,'viewsingleproduct'])->name('view.singleproduct');
 
 //login
 Route::get('login',[LoginController:: class,'login'])->name('admin.login');
@@ -49,7 +50,7 @@ Route::post('do/login',[LoginController:: class,'doLogin'])->name('admin.doLogin
 
 
 //grouping
-Route::group(['prefix'=>'admin','Middleware'=>['auth','admin']],function(){
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 
 
 Route::get('/', function () {
