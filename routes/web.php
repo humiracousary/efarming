@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WebhomeController;
 use App\Http\Controllers\TutorialController;
@@ -40,6 +41,10 @@ Route::get('/',[WebhomeController::class,'webhome'])->name('webhome');
 
 //mylocation
 Route::get('location',[MylocationController::class,'mylocation'])->name('location.mylocation');
+
+//contact
+Route::get('contact_us',[ContactController:: class,'trycontact'])->name('try.contact');
+
 
 // product
 Route::get('singleProduct/view/{id}',[singleproductController::class,'viewsingleproduct'])->name('view.singleproduct');
@@ -121,5 +126,6 @@ Route::get('stock/list',[StockController::class,'stocklist'])->name('stock.list'
 Route::get('stock/form',[StockController::class,'form'])->name('stock.form');
 Route::post('stock/add',[StockController::class,'add'])->name('stock.add');
 
-
+//contact
+Route::get('contact',[ContactController::class,'contact'])->name('contact.list');
 });

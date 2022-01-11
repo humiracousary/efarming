@@ -13,6 +13,8 @@ class ProductController extends Controller
     }
 
     public function productList(){
+       
+
         $product = Product::all();
         return view('backend.pages.product_list',compact('product'));
     }
@@ -86,19 +88,21 @@ class ProductController extends Controller
     }
 
 
+
     public function productSearch(){
         // dd(request()->all());
         $key=null;
-        if(request()->Search){
-            $key=request()->Search;
-            $data = Product::with('category')
-                ->where('name','LIKE','%'.$key.'%')
+        // dd(request()->search);
+        if(request()->search){
+            $key=request()->search;
+            $product = Product::where('name','LIKE','%'.$key.'%')
                 ->get();
-            return view('admin.product.product',compact('products','key'));
+                   
+            return view('backend.pages.product_list',compact('product','key'));
         }
+        $product = Product::all();
        
-        $data = Product::with('category')->get();
-        return view('admin.product.product',compact('products','key'));
+        return view('backend.pages.product_list',compact('product'));
     }
 
 }

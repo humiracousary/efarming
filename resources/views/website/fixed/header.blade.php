@@ -20,7 +20,7 @@
                         <ul>
                             <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
                             <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                            <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
+                            <li><a href="{{route('try.contact')}}"><i class="fas fa-headset"></i> Contact Us/feed back</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,8 +108,8 @@
                                 <li><a href="wishlist.html">Wishlist</a></li>
                             </ul>
                         </li>
-                        <!--<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>-->
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">feed back</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">feed back</a></li>-->
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -131,12 +131,16 @@
             </div>
 
 
+
+
+            <!--add to cart side manu-->
+
             <!-- Start Side Menu -->
-            <div class="side">
+            <!--<div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <li class="cart-box">
                     <ul class="cart-list">
-                       <!-- <li>
+                       <li>
                             <a href="#" class="photo"><img src="images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Delica omtantur </a></h6>
                             <p>1x - <span class="price">$80.00</span></p>
@@ -154,13 +158,13 @@
                         <li class="total">
                             <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
                             <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>-->
+                        </li>
                     </ul>
                 </li>
-            </div>
-    
+            </div>-->
             <!-- End Side Menu -->
         </nav>
+
         <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
