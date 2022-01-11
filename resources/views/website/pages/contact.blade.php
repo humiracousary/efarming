@@ -55,7 +55,7 @@
   <div class="row">
     
     <div class="column">
-      <form action="{{route('contact.list')}}" method="POST" enctype="multipart/form-data">
+      <form action="{{route('contact.add')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">

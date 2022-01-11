@@ -128,4 +128,8 @@ Route::post('stock/add',[StockController::class,'add'])->name('stock.add');
 
 //contact
 Route::get('contact',[ContactController::class,'contact'])->name('contact.list');
+Route::post('contact/add',[ContactController::class,'addcontact'])->name('contact.add');
+Route::get('contact/delete/{id}',[ContactController::class,'contactdelete'])->name('contact.delete');
+
+
 });
