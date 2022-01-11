@@ -13,27 +13,20 @@
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-top-box">
-                        <h3>Newsletter</h3>
-                        <form class="newsletter-box">
-                            <div class="form-group">
-                                <input class="" type="email" name="Email" placeholder="Email Address*" />
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <button class="btn hvr-hover" type="submit">Submit</button>
-                        </form>
+                        
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-top-box">
                         <h3>Social Media</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>farming is fun...hk farm is our pround...</p>
                         <ul>
-                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100009963649391"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <!--<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>-->
+                           <!-- <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>-->
+                           <!-- <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>-->
                             <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
@@ -43,13 +36,13 @@
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
-                        <h4>About Freshshop</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
+                        <h4>HK Farming</h4>
+                        <p>Agriculture is the practice of cultivating plants and livestock. Agriculture was the key development in the rise of sedentary human civilization, whereby farming of domesticated species created food surpluses that enabled people to live in cities. The history of agriculture began thousands of years ago.</p> 
+                        <p>Farming is growing crops and keeping animals for food and raw materials. Farming is a part of agriculture. ... Farming can feed many more people than hunter-gatherers can feed on the same amount of land. This allowed the human population to grow to such large numbers as they are today. </p> 							
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-link">
+                   <!-- <div class="footer-link">
                         <h4>Information</h4>
                         <ul>
                             <li><a href="#">About Us</a></li>
@@ -59,7 +52,7 @@
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Delivery Information</a></li>
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-link-contact">
@@ -83,11 +76,7 @@
 </footer>
 <!-- End Footer  -->
 
- <!-- Start copyright  -->
- <div class="footer-copyright">
-    <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-        <a href="https://html.design/">html design</a></p>
-</div>
+ 
 <!-- End copyright  -->
 
 <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>

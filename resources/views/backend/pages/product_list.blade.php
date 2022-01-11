@@ -15,14 +15,16 @@
 
 
     
-    <div class="row">
+    <form action="{{route('product.search')}}" method="GET">
+      <div class="row">
 
-     <div class="col-md-4"></div>
-     <div class="col-md-4"></div>
-     <div class="col-md-4"><input type="text" class="from-control" name="search" placeceholeder="search here....">
-      <button class="dtn btn-primary" type="submit">Search</button>
-      </div>
-    </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><input type="text" class="from-control" name="search" placeceholeder="search here....">
+         <button class="dtn btn-primary" type="submit">Search</button>
+         </div>
+       </div>
+    </form>
 
 
         <div class="col-sm-2"></div>
