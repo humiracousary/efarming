@@ -15,4 +15,31 @@ class ContactController extends Controller
         $contact = Contact::all();
         return view('backend.pages.contact_add',compact('contact'));
     }
+
+    public function addcontact(Request $request){
+        // dd($request->all());
+
+    contact::create([
+            'firstname'=>$request->firstname,
+            'lastname'=>$request->lastname,
+            'country'=>$request->country,
+            'subject'=>$request->subject,
+            
+            
+        ]);
+    }
+
+    public function contactdelete($id)
+   {
+        $data = contact::find($id);
+
+        if ($data)
+         {
+          $data->delete();
+          return redirect()->back();
+         }   
+          
+        return redirect()->route('try.contact');
+}
+
 }

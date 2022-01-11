@@ -28,7 +28,10 @@
                 <td>{{$contact->lastname}}</td>
                 <td>{{$contact->country}}</td>
                 <td>{{$contact->subject}}</td>
-                <td>
+                <td><a href="{{route('contact.delete',$contact->id)}}" class="btn btn-primary">delete</a></td>
+                </tr>
+                
+                @endforeach
             </tbody>
           </table></div>
         <div class="col-sm-2"></div>
