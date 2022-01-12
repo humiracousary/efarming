@@ -11,4 +11,10 @@ class Product extends Model
     
     protected $table='protucts';
     protected $guarded=[];
+
+
+    public function categoryName()
+    {
+        return $this->belongsTo(Category::class,'category','id');
+    }
 }
