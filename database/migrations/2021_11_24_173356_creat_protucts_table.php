@@ -16,10 +16,10 @@ class CreatProtuctsTable extends Migration
         Schema::create('protucts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('category');
             $table->double('price');
             $table->integer('quantity');
             $table->string('image');
-           // $table->integer('how much');
             $table->timestamps();
         });
     }

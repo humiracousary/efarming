@@ -20,6 +20,7 @@
                     <th scope="col">#</th>
                     <th scope="col">name</th>
                     <th scope="col">details</th> 
+                    <th scope="col">image</th>
                   </tr>
                 </thead>
 
@@ -29,6 +30,10 @@
                     <th scope="row">{{$key+1}}</th>
                     <td>{{$data->name}}</td>
                     <td>{{$data->details}}</td>
+                    <td>
+                      <img width="100px" src="{{url('upload/',$data->image)}}" alt="product image">
+                    </td>
+
                   </tr>
                
                   @endforeach
