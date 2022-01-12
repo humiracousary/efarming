@@ -63,25 +63,19 @@
                         <h1>Product Categories</h1>
                     </div>
                 </div>
-            <div class="row">
+
+                <div class="row">
+                @foreach ($data as $categories )
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="images/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">plants</a>
+                        <img class="img-fluid" style="height: 200px" src="{{url('/upload/' ,$categories->image)}}" alt="Image"/>
+                        <a class="btn hvr-hover" href="{{route('category',$categories->id)}}">{{$categories->name}}</a>
+                        
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="images/categories_img_02.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">seeds</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="images/categories_img_03.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">vegetables and furites</a>
-                    </div>
-                </div>
+                @endforeach
+                
+              
             </div>
         </div>
     </div>
@@ -125,7 +119,7 @@
             <div class="row special-list">
                 
                 
-                    @foreach ($data as $product )
+                @foreach ($data as $product)
                 <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
@@ -148,7 +142,7 @@
                         </div>
                     </div>
                 </div> 
-                    @endforeach
+                 @endforeach
                     
                
             </div>
@@ -318,7 +312,5 @@
     </div>
 </div>
 <!-- End Instagram Feed  -->
-    
 </div>
-
 @endsection

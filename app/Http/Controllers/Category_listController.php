@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Product;
 use App\Models\Category;
+use Illuminate\Http\Request;
+
 class Category_listController extends Controller
 {
     public function category_list()
@@ -35,4 +37,11 @@ class Category_listController extends Controller
         return redirect()->back();
         
     }
+
+public function category($id)
+{
+    $products = Product::where('category',$id)->get();
+    return view('website.pages.category',compact('products')); 
+}
+
 }
