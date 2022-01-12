@@ -45,6 +45,8 @@ Route::get('location',[MylocationController::class,'mylocation'])->name('locatio
 //contact
 Route::get('contact_us',[ContactController:: class,'trycontact'])->name('try.contact');
 
+//category
+Route::get('categorize/product/{id}',[Category_listController:: class,'category'])->name('category');
 
 // product
 Route::get('singleProduct/view/{id}',[singleproductController::class,'viewsingleproduct'])->name('view.singleproduct');
