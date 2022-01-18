@@ -41,21 +41,21 @@
               </tr>
             </thead>
             <tbody>
-              @foreach($product as $key=>$data)
+              @foreach($products as $product)
               <tr>
-                <th scope="row">{{$key+1}}</th>
-                <td>{{$data->name}}</td>
-                <td>{{$data->categoryName->name}}</td>
-                <td>{{$data->price}}</td>
-                <td>{{$data->quantity}}</td>
+                <th scope="row">{{$loop->iteration}}</th>
+                <td>{{$product->name}}</td>
+                <td>{{$product->categoryName?->name}}</td>
+                <td>{{$product->price}}</td>
+                <td>{{$product->quantity}}</td>
                 
                 <td>
-                  <img width="100px" src="{{url('/upload/'.$data->image)}}" alt="product image">
+                  <img width="100px" src="{{url('/upload/'.$product->image)}}" alt="product image">
                 </td>
                 <td> 
-                     <a href="{{route('product.edit',$data->id)}}" class="btn btn-primary">edit</a>
-                     <a href="{{route('product.view',$data->id)}}" class="btn btn-primary">view</a>
-                      <a href="{{route('product.delete',$data->id)}}" class="btn btn-primary">delete</a>
+                     <a href="{{route('product.edit',$product->id)}}" class="btn btn-primary">edit</a>
+                     <a href="{{route('product.view',$product->id)}}" class="btn btn-primary">view</a>
+                      <a href="{{route('product.delete',$product->id)}}" class="btn btn-primary">delete</a>
                 </td>
               </tr>
               @endforeach

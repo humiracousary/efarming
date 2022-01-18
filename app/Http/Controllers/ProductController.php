@@ -17,10 +17,10 @@ class ProductController extends Controller
     public function productList(){
        
 
-        $product = Product::with('categoryName')->get();
+        $products = Product::with('categoryName')->get();
         
-        // dd($product);
-        return view('backend.pages.product_list',compact('product'));
+        // dd($products);
+        return view('backend.pages.product_list',compact('products'));
     }
 
     public function add(Request $request){
@@ -36,7 +36,7 @@ class ProductController extends Controller
 
         Product::create([
             'name'=>$request->name,
-            'category'=>$request->category,
+            'category_id'=>$request->category,
             'price'=>$request->price,
             'quantity'=>$request->quantity,
             'image'=>$filename,
