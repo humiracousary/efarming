@@ -10,4 +10,9 @@ class MylocationController extends Controller
     {
         return view('website.pages.mylocation');
     }
+
+    public function about()
+    {
+        return view('website.pages.about');
+    }
 }

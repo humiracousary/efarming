@@ -13,7 +13,9 @@ class WebhomeController extends Controller
     {
         $data=Product::all();
         return view('website.layout.webhome',compact('data'));
-    
+
+
+    // public function category() {
     
         $data=Category::all();
         return view('website.layout.webhome',compact('data'));

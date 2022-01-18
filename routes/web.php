@@ -41,6 +41,7 @@ Route::get('/',[WebhomeController::class,'webhome'])->name('webhome');
 
 //mylocation
 Route::get('location',[MylocationController::class,'mylocation'])->name('location.mylocation');
+Route::get('about',[MylocationController::class,'about'])->name('about.farm');
 
 //contact
 Route::get('contact_us',[ContactController:: class,'trycontact'])->name('try.contact');
@@ -59,6 +60,9 @@ Route::post('do/login',[LoginController:: class,'doLogin'])->name('admin.doLogin
 //add to cart
 Route::get('add_to_cart/{id}',[AddtocartController:: class,'addtocart'])->name('add.cart');
 Route::get('view/add_to_cart',[AddtocartController:: class,'viewcart'])->name('cart');
+
+
+
 
 
 //grouping
@@ -101,6 +105,7 @@ Route::get('category/list',[Category_listController::class,'category_list'])->na
 Route::get('category/form',[Category_listController::class,'form'])->name('category.form');
 Route::post('category/add',[Category_listController::class,'add'])->name('category.add');
 
+Route::get('category/delete/{id}',[Category_listController::class,'categorydelete'])->name('category.delete');
 
 //order
 Route::get('order',[OrderController:: class,'order'])->name('order');
