@@ -11,14 +11,14 @@ class WebhomeController extends Controller
  
     public function webhome()
     {
-        $data=Product::all();
-        return view('website.layout.webhome',compact('data'));
+        $products=Product::all();
+        // return view('website.layout.webhome',compact('data'));
 
 
     // public function category() {
     
-        $data=Category::all();
-        return view('website.layout.webhome',compact('data'));
+        $categories=Category::all();
+        return view('website.layout.webhome',compact('products','categories'));
     }
 }
 

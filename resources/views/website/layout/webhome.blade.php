@@ -64,11 +64,11 @@
                     </div>
                 </div>
                 <div class="row">
-                @foreach ($data as $categories )
+                @foreach ($categories as $category )
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" style="height: 200px" src="{{url('/upload/' ,$categories->image)}}" alt="Image"/>
-                        <a class="btn hvr-hover" href="{{route('category',$categories->id)}}">{{$categories->name}}</a>  
+                        <img class="img-fluid" style="height: 200px" src="{{url('/upload/' ,$category->image)}}" alt="Image"/>
+                        <a class="btn hvr-hover" href="{{route('category',$category->id)}}">{{$category->name}}</a>  
                     </div>
                 </div>
                 @endforeach
@@ -115,7 +115,7 @@
             <div class="row special-list">
                 
                 
-                @foreach ($data as $product)
+                @foreach ($products as $product)
                 <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
