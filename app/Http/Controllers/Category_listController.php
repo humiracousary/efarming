@@ -40,7 +40,7 @@ class Category_listController extends Controller
 
 public function category($id)
 {
-    $products = Product::where('category',$id)->get();
+    $products = Product::where('category_id',$id)->get();
     return view('website.pages.category',compact('products')); 
 
     // $categories = category::where('category',$id)->get();
