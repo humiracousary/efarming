@@ -63,19 +63,15 @@
                         <h1>Product Categories</h1>
                     </div>
                 </div>
-
                 <div class="row">
                 @foreach ($data as $categories )
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" style="height: 200px" src="{{url('/upload/' ,$categories->image)}}" alt="Image"/>
-                        <a class="btn hvr-hover" href="{{route('category',$categories->id)}}">{{$categories->name}}</a>
-                        
+                        <a class="btn hvr-hover" href="{{route('category',$categories->id)}}">{{$categories->name}}</a>  
                     </div>
                 </div>
                 @endforeach
-                
-              
             </div>
         </div>
     </div>
@@ -98,7 +94,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> 
 
 
 
@@ -126,6 +122,7 @@
                             <div class="type-lb">
                                 <p class="sale">Sale</p>
                             </div>
+              
                             <img style="height: 200px" src="{{url('/upload/',$product->image)}}" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>

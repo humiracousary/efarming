@@ -42,6 +42,20 @@ public function category($id)
 {
     $products = Product::where('category',$id)->get();
     return view('website.pages.category',compact('products')); 
+
+    // $categories = category::where('category',$id)->get();
+    // return view('website.pages.category',compact('categories'));
 }
+
+public function categorydelete($id)
+{
+     $data = Category::find($id);
+
+     if ($data)
+      {
+       $data->delete();
+       return redirect()->back();
+      }    
+ }
 
 }
