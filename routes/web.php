@@ -67,7 +67,7 @@ Route::get('view/add_to_cart', [AddtocartController::class, 'viewcart'])->name('
 
 
 //grouping
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], function () {
 
 
     Route::get('/', function () {
