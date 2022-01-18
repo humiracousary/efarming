@@ -37,106 +37,104 @@ use App\Http\Controllers\singleproductController;
 
 
 //webhome
-Route::get('/',[WebhomeController::class,'webhome'])->name('webhome');
+Route::get('/', [WebhomeController::class, 'webhome'])->name('webhome');
 
 //mylocation
-Route::get('location',[MylocationController::class,'mylocation'])->name('location.mylocation');
-Route::get('about',[MylocationController::class,'about'])->name('about.farm');
+Route::get('location', [MylocationController::class, 'mylocation'])->name('location.mylocation');
+Route::get('about', [MylocationController::class, 'about'])->name('about.farm');
 
 //contact
-Route::get('contact_us',[ContactController:: class,'trycontact'])->name('try.contact');
+Route::get('contact_us', [ContactController::class, 'trycontact'])->name('try.contact');
+Route::post('contact/add', [ContactController::class, 'addcontact'])->name('contact.add');
 
 //category
-Route::get('categorize/product/{id}',[Category_listController:: class,'category'])->name('category');
+Route::get('categorize/product/{id}', [Category_listController::class, 'category'])->name('category');
 
 // product
-Route::get('singleProduct/view/{id}',[singleproductController::class,'viewsingleproduct'])->name('view.singleproduct');
+Route::get('singleProduct/view/{id}', [singleproductController::class, 'viewsingleproduct'])->name('view.singleproduct');
 
 //login
-Route::get('login',[LoginController:: class,'login'])->name('admin.login');
-Route::post('do/login',[LoginController:: class,'doLogin'])->name('admin.doLogin');
+Route::get('login', [LoginController::class, 'login'])->name('admin.login');
+Route::post('do/login', [LoginController::class, 'doLogin'])->name('admin.doLogin');
 
 
 //add to cart
-Route::get('add_to_cart/{id}',[AddtocartController:: class,'addtocart'])->name('add.cart');
-Route::get('view/add_to_cart',[AddtocartController:: class,'viewcart'])->name('cart');
+Route::get('add_to_cart/{id}', [AddtocartController::class, 'addtocart'])->name('add.cart');
+Route::get('view/add_to_cart', [AddtocartController::class, 'viewcart'])->name('cart');
 
 
 
 
 
 //grouping
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], function () {
 
 
-Route::get('/', function () {
-    return view('backend.layout.home');
-})->name('admin');
-
-
-
-//home
-Route::get('home',[HomeController::class,'home'])->name('home');
+    Route::get('/', function () {
+        return view('backend.layout.home');
+    })->name('admin');
 
 
 
-//logout
-Route::get('logout',[LoginController:: class,'logout'])->name('admin.logout');
+    //home
+    Route::get('home', [HomeController::class, 'home'])->name('home');
+
+
+
+    //logout
+    Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
 
 
 
 
-//product
-Route::get('create/product',[ProductController:: class,'createproduct'])->name('create.product');
-Route::get('product/list',[ProductController::class,'productList'])->name('product.list');
-Route::post('product/add',[ProductController::class,'add'])->name('product.add');
+    //product
+    Route::get('create/product', [ProductController::class, 'createproduct'])->name('create.product');
+    Route::get('product/list', [ProductController::class, 'productList'])->name('product.list');
+    Route::post('product/add', [ProductController::class, 'add'])->name('product.add');
 
-Route::get('product/view/{id}',[ProductController::class,'viewproduct'])->name('product.view');
-Route::get('product/edit/{id}',[ProductController::class,'editproduct'])->name('product.edit');
-Route::put('product/update/{id}',[ProductController::class,'productupdate'])->name('product.update');
-Route::get('product/delete/{id}',[ProductController::class,'productdelete'])->name('product.delete');
+    Route::get('product/view/{id}', [ProductController::class, 'viewproduct'])->name('product.view');
+    Route::get('product/edit/{id}', [ProductController::class, 'editproduct'])->name('product.edit');
+    Route::put('product/update/{id}', [ProductController::class, 'productupdate'])->name('product.update');
+    Route::get('product/delete/{id}', [ProductController::class, 'productdelete'])->name('product.delete');
 
-Route::get('product/search',[ProductController::class,'productSearch'])->name('product.search');
-
-
-
-//category
-Route::get('category/list',[Category_listController::class,'category_list'])->name('category.list');
-Route::get('category/form',[Category_listController::class,'form'])->name('category.form');
-Route::post('category/add',[Category_listController::class,'add'])->name('category.add');
-
-Route::get('category/delete/{id}',[Category_listController::class,'categorydelete'])->name('category.delete');
-
-//order
-Route::get('order',[OrderController:: class,'order'])->name('order');
-
-
-//order-details
-Route::get('order/details',[OrderdetailsController:: class,'orderdetails'])->name('order-details');
-
-
-//tutorial
-Route::get('add/tutotal',[TutorialController:: class,'addtutorial'])->name('add.tutorial');
-Route::get('tutorial/list',[TutorialController::class,'tutoriallist'])->name('tutorial.list');
-Route::post('tutotial/add',[TutorialController::class,'add'])->name('tutotial.add');
-
-
-//event
-Route::get('event/add',[EventController:: class,'addevent'])->name('add.event');
-Route::get('event/list',[EventController::class,'eventlist'])->name('event.list');
-Route::post('event',[EventController::class,'add'])->name('event.add');
+    Route::get('product/search', [ProductController::class, 'productSearch'])->name('product.search');
 
 
 
-//stock
-Route::get('stock/list',[StockController::class,'stocklist'])->name('stock.list');
-Route::get('stock/form',[StockController::class,'form'])->name('stock.form');
-Route::post('stock/add',[StockController::class,'add'])->name('stock.add');
+    //category
+    Route::get('category/list', [Category_listController::class, 'category_list'])->name('category.list');
+    Route::get('category/form', [Category_listController::class, 'form'])->name('category.form');
+    Route::post('category/add', [Category_listController::class, 'add'])->name('category.add');
 
-//contact
-Route::get('contact',[ContactController::class,'contact'])->name('contact.list');
-Route::post('contact/add',[ContactController::class,'addcontact'])->name('contact.add');
-Route::get('contact/delete/{id}',[ContactController::class,'contactdelete'])->name('contact.delete');
+    Route::get('category/delete/{id}', [Category_listController::class, 'categorydelete'])->name('category.delete');
+
+    //order
+    Route::get('order', [OrderController::class, 'order'])->name('order');
 
 
+    //order-details
+    Route::get('order/details', [OrderdetailsController::class, 'orderdetails'])->name('order-details');
+
+
+    //tutorial
+    Route::get('add/tutotal', [TutorialController::class, 'addtutorial'])->name('add.tutorial');
+    Route::get('tutorial/list', [TutorialController::class, 'tutoriallist'])->name('tutorial.list');
+    Route::post('tutotial/add', [TutorialController::class, 'add'])->name('tutotial.add');
+
+
+    //event
+    Route::get('event/add', [EventController::class, 'addevent'])->name('add.event');
+    Route::get('event/list', [EventController::class, 'eventlist'])->name('event.list');
+    Route::post('event', [EventController::class, 'add'])->name('event.add');
+
+
+
+    //stock
+    Route::get('stock/list', [StockController::class, 'stocklist'])->name('stock.list');
+    Route::get('stock/form', [StockController::class, 'form'])->name('stock.form');
+    Route::post('stock/add', [StockController::class, 'add'])->name('stock.add');
+
+    //contact
+    Route::get('contact', [ContactController::class, 'contact'])->name('contact.list');
+    Route::get('contact/delete/{id}', [ContactController::class, 'contactdelete'])->name('contact.delete');
 });

@@ -11,35 +11,34 @@ class ContactController extends Controller
     {
         return view('website.pages.contact');
     }
-    public function contact(){
+    public function contact()
+    {
         $contact = Contact::all();
-        return view('backend.pages.contact_add',compact('contact'));
+        return view('backend.pages.contact_add', compact('contact'));
     }
 
-    public function addcontact(Request $request){
+    public function addcontact(Request $request)
+    {
         // dd($request->all());
 
-    contact::create([
-            'firstname'=>$request->firstname,
-            'lastname'=>$request->lastname,
-            'country'=>$request->country,
-            'subject'=>$request->subject,
-            
-            
+        contact::create([
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'country' => $request->country,
+            'subject' => $request->subject,
         ]);
+        return redirect()->route('try.contact');
     }
 
     public function contactdelete($id)
-   {
+    {
         $data = contact::find($id);
 
-        if ($data)
-         {
-          $data->delete();
-          return redirect()->back();
-         }   
-          
-        return redirect()->route('try.contact');
-}
+        if ($data) {
+            $data->delete();
+            return redirect()->back();
+        }
 
+        return redirect()->route('try.contact');
+    }
 }

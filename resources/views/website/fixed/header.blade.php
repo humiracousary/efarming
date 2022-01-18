@@ -4,8 +4,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="custom-select-box">
-                    <!-- <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+                    <div class="custom-select-box">
+                        <!-- <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
 							<option>¥ JPY</option>
 							<option>$ USD</option>
 							<option>€ EUR</option>
@@ -18,7 +18,14 @@
 
                     <div class="our-link">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
+                            <li>
+                                <a href="#"><i class="fa fa-user s_color"></i> My Account
+                            @auth
+
+                                ({{ auth()->user()->name }})
+                            @endauth
+                            </a>
+                            </li>
                             <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
                             <li><a href="{{route('try.contact')}}"><i class="fas fa-headset"></i> Contact Us/feed back</a></li>
                         </ul>
@@ -26,12 +33,12 @@
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="login-box">
-						<select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-							<option>Register Here</option>
-							<option>Sign In</option>
-						</select>
-					</div>
+                    <div class="login-box">
+                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
+                            <option>Register Here</option>
+                            <option>Sign In</option>
+                        </select>
+                    </div>
 
 
                     <!-- <div class="text-slid-box">
@@ -63,10 +70,10 @@
                                 </li>
                             </ul>
                         </div>-->
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- End Main Top -->
 
@@ -100,8 +107,8 @@
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-								<li><a href="shop.html">Sidebar Shop</a></li>
-								<li><a href="shop-detail.html">Shop Detail</a></li>
+                                <li><a href="shop.html">Sidebar Shop</a></li>
+                                <li><a href="shop-detail.html">Shop Detail</a></li>
                                 <li><a href="cart.html">Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
                                 <li><a href="my-account.html">My Account</a></li>
@@ -119,12 +126,12 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu">
-							<a href="{{route('cart')}}">
-								<i class="fa fa-shopping-bag"></i>
-								<!--<span class="badge">#</span>-->
-								<p>My Cart <span>{{session('cart') ? count(session('cart')) : 0}}</span></p>
-							</a>
-						</li>
+                            <a href="{{route('cart')}}">
+                                <i class="fa fa-shopping-bag"></i>
+                                <!--<span class="badge">#</span>-->
+                                <p>My Cart <span>{{session('cart') ? count(session('cart')) : 0}}</span></p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
