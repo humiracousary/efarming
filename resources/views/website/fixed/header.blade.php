@@ -27,18 +27,24 @@
                             </a>
                             </li>
                             <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                            <li><a href="{{route('try.contact')}}"><i class="fas fa-headset"></i> Contact Us/feed back</a></li>
+                            
+                            <li><a href="{{route('do.registration')}}"><i class="fas fa-headset"></i> registration</a></li>
+                            <li><a href="{{route('admin.logout')}}"><i class="fas fa-headset"></i> login</a></li>
+                            <li><a href="{{route('admin.logout')}}"><i class="fas fa-headset"></i> log out</a></li>
+
                         </ul>
                     </div>
                 </div>
+                
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                {{-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="login-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-                            <option>Register Here</option>
-                            <option>Sign In</option>
-                        </select>
-                    </div>
+                            <option><li><a href="ok">Log In</a></li></option>
+                            <option><li><a href="{{route('do.registration')}}">Ragistration</a></li></option>
+                        </select> 
+                    </div> --}}
+
 
 
                     <!-- <div class="text-slid-box">
@@ -115,8 +121,7 @@
                                 <li><a href="wishlist.html">Wishlist</a></li>
                             </ul>
                         </li>
-                        <!--<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">feed back</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href="{{route('try.contact')}}">Contact Us/feed back</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
