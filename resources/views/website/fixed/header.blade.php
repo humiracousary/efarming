@@ -12,9 +12,9 @@
 						</select>-->
                     </div>
 
-                    <div class="right-phone-box">
+                    {{-- <div class="right-phone-box">
                         <p>Call US :- <a href="#"> +88 018 34587000</a></p>
-                    </div>
+                    </div> --}}
 
                     <div class="our-link">
                         <ul>
@@ -29,21 +29,21 @@
                             <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
                             
                             <li><a href="{{route('do.registration')}}"><i class="fas fa-headset"></i> registration</a></li>
-                            <li><a href="{{route('admin.logout')}}"><i class="fas fa-headset"></i> login</a></li>
-                            <li><a href="{{route('admin.logout')}}"><i class="fas fa-headset"></i> log out</a></li>
+                            {{-- <li><a href="{{route('admin.logout')}}"><i class="fas fa-headset"></i> login</a></li>
+                            <li><a href="{{route('admin.logout')}}"><i class="fas fa-headset"></i> log out</a></li> --}}
 
                         </ul>
                     </div>
                 </div>
                 
 
-                {{-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="login-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
                             <option><li><a href="ok">Log In</a></li></option>
                             <option><li><a href="{{route('do.registration')}}">Ragistration</a></li></option>
                         </select> 
-                    </div> --}}
+                    </div>
 
 
 
@@ -109,6 +109,8 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="{{route('webhome')}}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('about.farm')}}">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('events')}}">Event</a></li>
+
                         <li class="nav-item"><a class="nav-link" href="about.html">offer</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>

@@ -1,17 +1,11 @@
-@extends('welcome')
+@extends('website.master')
+
 @section('content')
 
-<h1><b>event List</b></h1>
 
 <div class="container-fluid">
 
-    <div class="row">
-     
-        <div class="col-md-6">
-            <a href="{{route('add.event')}}" class="btn btn-primary">Add event</a>
-        </div>
-
-        <div class="row">
+    
             <div class="col-sm-2"></div>
             <div class="col-sm-8"> <table class="table">
                 <thead>
@@ -21,6 +15,8 @@
                     <th scope="col">description</th>
                     <th scope="col">date</th>
                     <th scope="col">time</th>
+                    <th scope="col">action</th>
+
                   </tr>
                 </thead>
                 @foreach($event as $key=>$data)
@@ -33,7 +29,7 @@
                   <td> 
                     {{-- <a href="{{route('product.edit',$product->id)}}" class="btn btn-primary">edit</a>
                     <a href="{{route('product.view',$product->id)}}" class="btn btn-primary">view</a> --}}
-                     <a href="{{route('event.delete',$data->id)}}" class="btn btn-primary">delete</a>
+                     <li><a href="{{route('do.registration')}}" class="btn btn-primary">Ragistration</a></li>
                </td>
                 </tr>
                 
@@ -45,5 +41,7 @@
 
     </div>
 </div>
-
-@endsection
+                
+                
+    
+ @endsection

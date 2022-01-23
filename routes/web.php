@@ -54,6 +54,10 @@ Route::get('categorize/product/{id}', [Category_listController::class, 'category
 // product
 Route::get('singleProduct/view/{id}', [singleproductController::class, 'viewsingleproduct'])->name('view.singleproduct');
 
+
+//event 
+Route::get('view/event', [EventController::class, 'events'])->name('events');
+
 //login
 Route::get('login', [LoginController::class, 'login'])->name('admin.login');
 Route::post('do/login', [LoginController::class, 'doLogin'])->name('admin.doLogin');
@@ -130,6 +134,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], functi
     Route::get('event/list', [EventController::class, 'eventlist'])->name('event.list');
     Route::post('event', [EventController::class, 'add'])->name('event.add');
 
+    Route::get('event/delete/{id}', [EventController::class, 'eventdelete'])->name('event.delete');
 
 
     //stock
