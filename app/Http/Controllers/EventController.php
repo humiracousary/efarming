@@ -26,7 +26,24 @@ class EventController extends Controller
             'time'=>$request->time,
         
         ]);
-        return redirect()->back();
+        return redirect()->route('event.list');
 
 }
+public function eventdelete($id)
+   {
+        $data = event::find($id);
+
+        if ($data)
+         {
+          $data->delete();
+          return redirect()->back();
+         }    
+    }
+
+
+public function events()
+    {
+        $event=event::all();
+        return view('website.pages.eventshow',compact('event'));
+    }
 }
