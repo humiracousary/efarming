@@ -15,6 +15,7 @@ use App\Http\Controllers\TutorialController;
 use App\Http\Controllers\AddtocartController;
 use App\Http\Controllers\MylocationController;
 use App\Http\Controllers\OrderdetailsController;
+use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\Category_listController;
 use App\Http\Controllers\singleproductController;
 
@@ -57,6 +58,8 @@ Route::get('singleProduct/view/{id}', [singleproductController::class, 'viewsing
 Route::get('login', [LoginController::class, 'login'])->name('admin.login');
 Route::post('do/login', [LoginController::class, 'doLogin'])->name('admin.doLogin');
 
+//registration
+Route::get('registration', [RegistrationController::class, 'registration'])->name('do.registration');
 
 //add to cart
 Route::get('add_to_cart/{id}', [AddtocartController::class, 'addtocart'])->name('add.cart');
