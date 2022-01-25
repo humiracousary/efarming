@@ -10,7 +10,7 @@
                 <div class="type-lb">
                     <p class="sale">Sale</p>
                 </div>
-                <img style="height: 200px" src="{{url('/upload/',$product->image)}}" class="img-fluid" alt="Image">
+                <img style="height: 200px" src="{{url('uploads/',$product->image)}}" class="img-fluid" alt="Image">
                 <div class="mask-icon">
                     <ul>
                         <li><a href="{{route('view.singleproduct',$product->id)}}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>

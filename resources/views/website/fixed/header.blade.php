@@ -22,15 +22,18 @@
                                 <a href="#"><i class="fa fa-user s_color"></i> My Account
                             @auth
 
-                                ({{ auth()->user()->name }})
+                                ({{ auth()->user()->name }}-{{auth()->user()->user_type}})
                             @endauth
                             </a>
                             </li>
                             <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                            
+                            @if(auth()->user())
+                            <li><a href="{{route('user.logout')}}"><i class="fas fa-headset"></i> log out</a></li>
+                            @else
                             <li><a href="{{route('do.registration')}}"><i class="fas fa-headset"></i> registration</a></li>
                             <li><a href="{{route('admin.login')}}"><i class="fas fa-headset"></i> login</a></li>
-                            <li><a href="{{route('user.logout')}}"><i class="fas fa-headset"></i> log out</a></li>
+                            @endif
+                            
 
                         </ul>
                     </div>
