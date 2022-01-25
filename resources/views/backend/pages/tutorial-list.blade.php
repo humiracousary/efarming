@@ -17,19 +17,24 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">name</th>
+                    <th scope="col">description</th>
+                    <th scope="col">link</th>
+                    <th scope="col">image</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                @foreach($tutorial as $key=>$data)
+                <tr>
+                  <th scope="row">{{$key+1}}</th>
+                  <td>{{$data->name}}</td>
+                  <td>{{$data->details}}</td>
+                  <td>{{$data->link}}</td>
+                  <td>
+                    <img width="100px" src="{{url('uploads/'.$data->image)}}" alt="product image">
+                  </td>
+                    
                   </tr>
-                 
+                  @endforeach
               </table></div>
             <div class="col-sm-2"></div>
           </div>

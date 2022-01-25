@@ -17,6 +17,8 @@ class CreateTutorialsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('details');
+            $table->string('link');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
