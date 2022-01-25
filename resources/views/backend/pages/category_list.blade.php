@@ -31,7 +31,7 @@
                     <td>{{$data->name}}</td>
                     <td>{{$data->details}}</td>
                     <td>
-                      <img width="100px" src="{{url('upload/',$data->image)}}" alt="product image">
+                      <img width="100px" src="{{url('uploads/'.$data->image)}}" alt="product image">
                     </td>
                     <td> 
                       {{-- <a href="{{route('product.edit',$data->id)}}" class="btn btn-primary">edit</a>

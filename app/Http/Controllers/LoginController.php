@@ -37,4 +37,10 @@ class LoginController extends Controller
         Auth::logout();
         return redirect()->route('admin.login')->with('message', 'Logging out.');
     }
+
+    public function dologout()
+    {
+        Auth::logout();
+        return redirect()->route('webhome')->with('message', 'Logging out.');
+    }
 }
