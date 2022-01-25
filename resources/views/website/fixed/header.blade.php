@@ -29,8 +29,8 @@
                             <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
                             
                             <li><a href="{{route('do.registration')}}"><i class="fas fa-headset"></i> registration</a></li>
-                            {{-- <li><a href="{{route('admin.logout')}}"><i class="fas fa-headset"></i> login</a></li>
-                            <li><a href="{{route('admin.logout')}}"><i class="fas fa-headset"></i> log out</a></li> --}}
+                            <li><a href="{{route('admin.login')}}"><i class="fas fa-headset"></i> login</a></li>
+                            <li><a href="{{route('user.logout')}}"><i class="fas fa-headset"></i> log out</a></li>
 
                         </ul>
                     </div>
@@ -38,12 +38,13 @@
                 
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="login-box">
+                    
+                    {{-- <div class="login-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-                            <option><li><a href="ok">Log In</a></li></option>
+                            <option><li><a href="{{route('admin.login')}}">Log In</a></li></option>
                             <option><li><a href="{{route('do.registration')}}">Ragistration</a></li></option>
                         </select> 
-                    </div>
+                    </div> --}}
 
 
 

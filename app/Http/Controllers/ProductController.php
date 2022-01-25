@@ -31,7 +31,7 @@ class ProductController extends Controller
         {
             $file=$request->file('image');
             $filename=date('ymdhms').'.'.$file->getClientOriginalExtension();
-            $file->storeAs('/upload',$filename);
+            $file->storeAs('uploads/',$filename);
         }
 
         Product::create([

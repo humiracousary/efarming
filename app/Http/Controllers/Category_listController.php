@@ -21,17 +21,17 @@ class Category_listController extends Controller
     public function add(Request $request){
         // dd($request->all());
 
-        $filename='';
+        $cate_image='';
         if ($request->hasFile('image'))
         {
             $file=$request->file('image');
-            $filename=date('ymdhms').'.'.$file->getClientOriginalExtension();
-            $file->storeAs('/upload',$filename);
+            $cate_image=date('ymdhms').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('uploads/',$cate_image);
         }
         Category::create([
             'name'=>$request->name,
             'details'=>$request->details,
-            'image'=>$filename,
+            'image'=>$cate_image,
 
         ]);
         return redirect()->back();

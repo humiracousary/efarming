@@ -50,7 +50,7 @@
                 <td>{{$product->quantity}}</td>
                 
                 <td>
-                  <img width="100px" src="{{url('/upload/'.$product->image)}}" alt="product image">
+                  <img width="100px" src="{{url('uploads/'.$product->image)}}" alt="product image">
                 </td>
                 <td> 
                      <a href="{{route('product.edit',$product->id)}}" class="btn btn-primary">edit</a>
