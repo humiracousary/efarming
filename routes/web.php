@@ -61,12 +61,12 @@ Route::get('view/event', [EventController::class, 'events'])->name('events');
 //login
 Route::get('login', [LoginController::class, 'login'])->name('admin.login');
 Route::post('do/login', [LoginController::class, 'doLogin'])->name('admin.doLogin');
-
+//user
 Route::get('logout', [LoginController::class, 'dologout'])->name('user.logout');
 
 //registration
 Route::get('registration', [RegistrationController::class, 'registration'])->name('do.registration');
-
+Route::post('/registration/do',[LoginController::class,'registration_store'])->name('user.registration');
 //add to cart
 Route::get('add_to_cart/{id}', [AddtocartController::class, 'addtocart'])->name('add.cart');
 Route::get('view/add_to_cart', [AddtocartController::class, 'viewcart'])->name('cart');

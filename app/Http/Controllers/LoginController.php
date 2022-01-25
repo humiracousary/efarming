@@ -1,12 +1,26 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    public function registration_store(Request $request)
+    {
+//        dd($request->all());
+        User::create([
+           'name'=>$request->user_name,
+           'email'=>$request->user_email,
+           'password'=>bcrypt($request->user_password),
+           'mobile'=>$request->user_mobile,
+        ]);
+
+        return redirect()->back()->with('message','Registration successful.');
+
+
+    }
     public function login()
     {
         return view('backend.pages.login');
