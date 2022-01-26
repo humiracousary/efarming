@@ -67,9 +67,16 @@ Route::get('logout', [LoginController::class, 'dologout'])->name('user.logout');
 //registration
 Route::get('registration', [RegistrationController::class, 'registration'])->name('do.registration');
 Route::post('/registration/do',[LoginController::class,'registration_store'])->name('user.registration');
+
+
 //add to cart
+
+// Route::group(['middleware'=>'web_auth'],function (){});
+
 Route::get('add_to_cart/{id}', [AddtocartController::class, 'addtocart'])->name('add.cart');
 Route::get('view/add_to_cart', [AddtocartController::class, 'viewcart'])->name('cart');
+Route::get('/clear-cart',[AddtocartController::class,'clearCart'])->name('cart.clear');
+
 
 
 

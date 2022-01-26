@@ -27,7 +27,8 @@ class AddtocartController extends Controller
         }
 
         session()->put('cart', $cart);
-        return redirect()->back();
+        //return redirect()->back();
+        return redirect()->back()->with('message', 'Product Added to Cart.');
     }
 
     public function viewcart()
@@ -39,7 +40,7 @@ class AddtocartController extends Controller
 
 
 
-    public function delete()
+    public function clearCart()
     {
         session()->forget('cart');
         return redirect()->back();
