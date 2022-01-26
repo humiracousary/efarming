@@ -183,8 +183,7 @@
                     </div>
                 </div>
                 @endforeach
-            </div>
-            
+            </div>  
         </div>
     </div>
     <!-- End Blog  -->
