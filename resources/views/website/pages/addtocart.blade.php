@@ -2,6 +2,7 @@
 
 @section('content')
 
+<h1 style="padding-top: 100px;">My Cart ({{session()->has('cart') ? count(session()->get('cart')):0}})</h1>
 
 <div class="container">
   <div class="row">
@@ -42,14 +43,25 @@
       @endforeach
       @endif
 
-    </table>
-
-    <div style="float:right">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+<td>
+    <div >
     @if ($carts)
-    <p>Total={{ $total }}</p>
+    <p><h1>Total={{ $total }}</h1></p>
     @else
-    <p>There is no Products On The cart</p>
+    <p><h1>There is no Products On The cart</h1></p>
     @endif
+    </div>
+</td>
+  </tr>
+
+  </table>
+    <div>
+    <a href="{{route('cart.clear')}}" class="btn btn-danger">Clear Cart</a>
     </div>
 
   </div>
