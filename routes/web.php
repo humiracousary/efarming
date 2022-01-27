@@ -71,12 +71,13 @@ Route::post('/registration/do',[LoginController::class,'registration_store'])->n
 
 //add to cart
 
-// Route::group(['middleware'=>'web_auth'],function (){});
+Route::group(['middleware'=>'web_auth'],function (){
 
 Route::get('add_to_cart/{id}', [AddtocartController::class, 'addtocart'])->name('add.cart');
 Route::get('view/add_to_cart', [AddtocartController::class, 'viewcart'])->name('cart');
 Route::get('/clear-cart',[AddtocartController::class,'clearCart'])->name('cart.clear');
-
+Route::get('/checkout',[AddtocartController::class,'checkout'])->name('cart.checkout');
+});
 
 
 
@@ -111,7 +112,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], functi
     Route::get('product/view/{id}', [ProductController::class, 'viewproduct'])->name('product.view');
     Route::get('product/edit/{id}', [ProductController::class, 'editproduct'])->name('product.edit');
     Route::put('product/update/{id}', [ProductController::class, 'productupdate'])->name('product.update');
-    Route::get('product/delete/{id}', [ProductController::class, 'productdelete'])->name('product.delete');
+    Route::get('product/delete /{id}', [ProductController::class, 'productdelete'])->name('product.delete');
 
     Route::get('product/search', [ProductController::class, 'productSearch'])->name('product.search');
 
@@ -124,8 +125,19 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], functi
 
     Route::get('category/delete/{id}', [Category_listController::class, 'categorydelete'])->name('category.delete');
 
+
+
     //order
     Route::get('order', [OrderController::class, 'order'])->name('order');
+
+
+    Route::get('order/view/{id}', [OrderController::class, 'vieworder'])->name('order.view');;
+
+    Route::get('order/delete/{id}',[OrderController::class,'delete'])->name('order.delete');
+    // Route::post('/order/update/{id}',[OrderController::class,'orderUpdate'])->name('order.update');
+    // Route::get('/order/pending',[OrderController::class,'orderPending'])->name('order.pending');
+    // Route::get('/order/delivered',[OrderController::class,'orderDelivered'])->name('order.delivered');
+    // Route::get('/order/cancelled',[OrderController::class,'orderCancelled'])->name('order.cancelled');
 
 
     //order-details
