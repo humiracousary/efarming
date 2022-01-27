@@ -5,32 +5,49 @@
 
 <div class="container-fluid">
 
-    <div class="row">
-     
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8"> <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                 
-              </table></div>
-            <div class="col-sm-2"></div>
-          </div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8"> <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">user name</th>
+            <th scope="col">email</th>
+            <th scope="col">phone number</th>
+            <th scope="col">total price</th>
+            <th scope="col">action</th>
+            
+          </tr>
+        </thead>
+        @foreach($order as $key=>$data)
+        <tr>
+          <th scope="row">{{$key+1}}</th>
+          <td>{{$data->user->name}}</td>
+          <td>{{$data->user->email}}</td>
+          <td>{{$data->user->mobile}}</td>
+          <td>{{$data->total_price}}</td>
+          <td>
+          <a href="{{route('order.view',$data->id)}}" class="btn btn-info">view</a>
+                 <a href="{{route('order.delete',$data->id)}}" class="btn btn-danger">Delete</a> 
+                
+                <form action="" method="post">
+                    @csrf
 
-    </div>
+                    <select class="form-control" name="status" style="width: 136px;">
+
+                        <option value="processed">Processed</option>
+                        <option value="cancelled">Cancelled</option>
+                        <option value="delivered">Delivered</option>
+
+                    </select>
+                    <button class="btn btn-primary">Update</button>
+                </form>
+            </td></tr>
+          @endforeach
+      </table></div>
+    <div class="col-sm-2"></div>
+  </div>
+
 </div>
 
 @endsection
