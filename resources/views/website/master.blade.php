@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Freshshop - Ecommerce Bootstrap 4 HTML Template</title>
+    <title>HK Farm</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">

@@ -22,6 +22,7 @@ class EventController extends Controller
         Event::create([
             'name'=>$request->name,
             'details'=>$request->details,
+            'place'=>$request->place,
             'date'=>$request->date,
             'time'=>$request->time,
         

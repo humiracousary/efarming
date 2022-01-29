@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container-fluid">
-    {{-- <h1>welcome to my project</h1> --}}
+<h1>welcome to my project</h1>
 
     <style>
         .card-box {
@@ -71,13 +71,12 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="card-box bg-blue">
                     <div class="inner">
-                        {{-- <h3> {{$count['product']}} </h3> --}}
+                         <h3> {{$count['product']}} </h3>
                         <p> Number of Product </p>
                     </div>
                     <div class="icon">
@@ -90,7 +89,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="card-box bg-green">
                     <div class="inner">
-                        {{-- <h3> {{$count['order']}} </h3> --}}
+                         <h3> {{$count['order']}} </h3> 
                         <p> Total Order </p>
                     </div>
                     <div class="icon">

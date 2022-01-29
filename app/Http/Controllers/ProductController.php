@@ -100,14 +100,14 @@ class ProductController extends Controller
         // dd(request()->search);
         if(request()->search){
             $key=request()->search;
-            $product = Product::where('name','LIKE','%'.$key.'%')
+            $products = Product::where('name','LIKE','%'.$key.'%')
                 ->get();
                    
-            return view('backend.pages.product_list',compact('product','key'));
+            return view('backend.pages.product_list',compact('products','key'));
         }
-        $product = Product::all();
+        $products = Product::all();
        
-        return view('backend.pages.product_list',compact('product'));
+        return view('backend.pages.product_list',compact('products'));
     }
 
 }

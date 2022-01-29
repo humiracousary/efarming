@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->double('total_price',10,2)->default(0);
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

@@ -11,7 +11,7 @@
     <meta name="description"
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Ample Admin Lite Template by WrapPixel</title>
+    <title>Admin Panal</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{url('backend/plugins/images/favicon.png')}}">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{url('backend/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css')}}">
     <!-- Custom CSS -->
     <link href="{{url('backend/css/style.min.css')}}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04598f0499.js" crossorigin="anonymous"></script>
 </head>
 
 <body>

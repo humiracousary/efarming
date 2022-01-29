@@ -50,7 +50,8 @@
 <body>
 <div class="container">
   <div style="text-align:center">
-    <h2>Contact Us</h2>
+    <br>
+    <h1>Contact Us</h1>
   </div>
   <div class="row">
     
@@ -61,7 +62,7 @@
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Country</label>
+        <label for="country">City</label>
         <select id="country" name="country">
           <option value="Dhaka">Dhaka</option>
           <option value="Khulna">Khulna</option>

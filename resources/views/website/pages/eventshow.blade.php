@@ -13,6 +13,7 @@
                     <th scope="col">#</th>
                     <th scope="col">event name</th>
                     <th scope="col">description</th>
+                    <th scope="col">place</th>
                     <th scope="col">date</th>
                     <th scope="col">time</th>
                     <th scope="col">action</th>
@@ -24,6 +25,7 @@
                   <th scope="row">{{$key+1}}</th>
                   <td>{{$data->name}}</td>
                   <td>{{$data->details}}</td>
+                  <td>{{$data->place}}</td>
                   <td>{{$data->date}}</td>
                   <td>{{$data->time}}</td>
                   <td> 

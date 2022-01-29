@@ -71,9 +71,11 @@
                                     <td>{{$data->sub_total}}</td>
                                 </tr>
                                 @endforeach
+                                <tr><td></td><td></td><td></td><td>Total{{$order->total_price}}</td></tr>
                             </tbody>
-                       Total{{$order->total_price}}
+                      
                         </table>
+                        
                     </div>
                 </div>
                 <div class="text-right mb-3"><button class="btn btn-danger btn-sm mr-5" type="button">Pay Now</button></div>
