@@ -6,9 +6,9 @@
             <ul id="sidebarnav">
                 <!-- User Profile-->
                 <li class="sidebar-item pt-2">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('home')}}"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('admin')}}"
                         aria-expanded="false">
-                        <i class="far fa-user" aria-hidden="true"></i>
+                        <i class="fas fa-house-user" aria-hidden="true"></i>
                         <span class="hide-menu">Home</span>
                     </a>
                 </li>

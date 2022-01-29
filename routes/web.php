@@ -48,6 +48,7 @@ Route::get('about', [MylocationController::class, 'about'])->name('about.farm');
 Route::get('contact_us', [ContactController::class, 'trycontact'])->name('try.contact');
 Route::post('contact/add', [ContactController::class, 'addcontact'])->name('contact.add');
 
+
 //category
 Route::get('categorize/product/{id}', [Category_listController::class, 'category'])->name('category');
 
@@ -58,9 +59,12 @@ Route::get('singleProduct/view/{id}', [singleproductController::class, 'viewsing
 //event 
 Route::get('view/event', [EventController::class, 'events'])->name('events');
 
+
+
 //login
 Route::get('login', [LoginController::class, 'login'])->name('admin.login');
 Route::post('do/login', [LoginController::class, 'doLogin'])->name('admin.doLogin');
+
 //user
 Route::get('logout', [LoginController::class, 'dologout'])->name('user.logout');
 
@@ -79,7 +83,9 @@ Route::get('/clear-cart',[AddtocartController::class,'clearCart'])->name('cart.c
 Route::get('/checkout',[AddtocartController::class,'checkout'])->name('cart.checkout');
 });
 
-
+//user_order_show
+Route::get('my_order', [AddtocartController::class,'myorder'])->name('my.oder');
+Route::get('my_order/view/{id}', [AddtocartController::class,'myorderview'])->name('my.oder.view');
 
 
 
@@ -87,14 +93,10 @@ Route::get('/checkout',[AddtocartController::class,'checkout'])->name('cart.chec
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], function () {
 
 
-    Route::get('/', function () {
-        return view('backend.layout.home');
-    })->name('admin');
-
 
 
     //home
-    Route::get('home', [HomeController::class, 'home'])->name('home');
+    Route::get('/', [HomeController::class, 'home'])->name('admin');
 
 
 
@@ -134,10 +136,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], functi
     Route::get('order/view/{id}', [OrderController::class, 'vieworder'])->name('order.view');;
 
     Route::get('order/delete/{id}',[OrderController::class,'delete'])->name('order.delete');
-    // Route::post('/order/update/{id}',[OrderController::class,'orderUpdate'])->name('order.update');
-    // Route::get('/order/pending',[OrderController::class,'orderPending'])->name('order.pending');
-    // Route::get('/order/delivered',[OrderController::class,'orderDelivered'])->name('order.delivered');
-    // Route::get('/order/cancelled',[OrderController::class,'orderCancelled'])->name('order.cancelled');
+
+    Route::post('order/update/{id}',[OrderController::class,'orderUpdate'])->name('order.update');
+    Route::get('order/pending',[OrderController::class,'orderPending'])->name('order.pending');
+    Route::get('order/delivered',[OrderController::class,'orderDelivered'])->name('order.delivered');
+    Route::get('order/cancelled',[OrderController::class,'orderCancelled'])->name('order.cancelled');
 
 
     //order-details

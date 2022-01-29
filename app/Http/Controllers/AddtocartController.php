@@ -80,4 +80,20 @@ class AddtocartController extends Controller
 
 
     }
+
+    // my_order
+    public function myorder()
+    {
+        $order=Order::with('orderDtails')->where('user_id',auth()->user()->id)->get();
+        //dd($order);
+        return view('website.pages.myorder',compact('order'));
+    }
+
+    public function myorderview($order_id)
+    {
+        // dd($order_id);
+        $orderdetail=OrderDetail::where('order_id',$order_id)->get();
+        // dd($orderdetail);
+        return view('website.pages.myorderview',compact('orderdetail'));
+    }
 }

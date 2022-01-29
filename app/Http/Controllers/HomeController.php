@@ -10,9 +10,9 @@ class HomeController extends Controller
 {
     public function home()
     {
-        // $count['product']=Product::all()->count();
-        // $count['order']=Order::all()->count();
-        // $count['customer']=User::all()->count();,compact('count')
-        return view('backend.layout.home');
+        $count['product']=Product::all()->count();
+        $count['order']=Order::all()->count();
+            // $count['customer']=User::all()->count();
+        return view('backend.layout.home',compact('count'));
     }
 }

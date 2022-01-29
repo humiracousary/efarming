@@ -15,6 +15,10 @@
             <input name="details" type="text" class="form-control" id="exampleInputPassword1" placeholder="Description">
         </div>
         <div class="form-group">
+            <label for="exampleInputPassword1">event place</label>
+            <input name="place" type="text" class="form-control" id="exampleInputPassword1" placeholder="Description">
+        </div>
+        <div class="form-group">
             <label for="exampleInputPassword1">event date</label>
             <input type="date" class="form-control" id="exampleInputPassword1" placeholder="name" name="date">
             </div>

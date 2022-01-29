@@ -6,8 +6,8 @@
         
         <p>Product Name: {{$data->name}}</p>
         <p>Product Name: {{$data->price}}</p>
-        <p>Product Quantity: {{$data->quentity}}</p>
-        <p>Product Image:<img width="100px" src="{{url('/upload/'.$data->image)}}" alt="product image"></p>
+        <p>Product Quantity: {{$data->quantity}}</p>
+        <p>Product Image:<img width="100px" src="{{url('uploads/'.$data->image)}}" alt="product image"></p>
     </div>
 </div>
     <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">

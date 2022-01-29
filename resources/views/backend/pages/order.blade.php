@@ -3,6 +3,20 @@
 
 <h1><b>order</b></h1>
 
+<div>
+  <form action="{{route('order')}}">
+      <div class="input-group rounded mt-3 mb-2">
+          <input type="date" class="form-control rounded" name="from_date" placeholder="Search" aria-label="Search"
+                 aria-describedby="search-addon" />
+          <input type="date" class="form-control rounded" name="to_date" placeholder="Search" aria-label="Search"
+                 aria-describedby="search-addon" />
+          <span class="input-group-text border-0" id="search-addon">
+  <button type="submit">submit</button>
+</span>
+      </div>
+  </form>
+</div>
+
 <div class="container-fluid">
 
   <div class="row">
@@ -15,6 +29,7 @@
             <th scope="col">email</th>
             <th scope="col">phone number</th>
             <th scope="col">total price</th>
+            <th scope="col">status</th>
             <th scope="col">action</th>
             
           </tr>
@@ -26,11 +41,12 @@
           <td>{{$data->user->email}}</td>
           <td>{{$data->user->mobile}}</td>
           <td>{{$data->total_price}}</td>
+          <td>{{$data->status}}</td>
           <td>
           <a href="{{route('order.view',$data->id)}}" class="btn btn-info">view</a>
-                 <a href="{{route('order.delete',$data->id)}}" class="btn btn-danger">Delete</a> 
+                 {{-- <a href="{{route('order.delete',$data->id)}}" class="btn btn-danger">Delete</a>  --}}
                 
-                <form action="" method="post">
+                <form action="{{route('order.update',$data->id)}}" method="post">
                     @csrf
 
                     <select class="form-control" name="status" style="width: 136px;">
