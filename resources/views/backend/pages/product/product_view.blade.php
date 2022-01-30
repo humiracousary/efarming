@@ -5,7 +5,7 @@
     <div class="container-fluid">
         
         <p>Product Name: {{$data->name}}</p>
-        <p>Product Name: {{$data->price}}</p>
+        <p>Product Name: {{$data->price}} BDT</p>
         <p>Product Quantity: {{$data->quantity}}</p>
         <p>Product Image:<img width="100px" src="{{url('uploads/'.$data->image)}}" alt="product image"></p>
     </div>

@@ -25,10 +25,10 @@
                             <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
                     
                             @if(auth()->user())
-                            <li><a href="{{route('user.logout')}}"><i class="fas fa-headset"></i> log out</a></li>
+                            <li><a href="{{route('user.logout')}}"><i class="fas fa-sign-out-alt"></i> log out</a></li>
                             @else
-                            <li><a href="{{route('do.registration')}}"><i class="fas fa-headset"></i> registration</a></li>
-                            <li><a href="{{route('admin.login')}}"><i class="fas fa-headset"></i> login</a></li>
+                            <li><a href="{{route('do.registration')}}"><i class="fas fa-user-plus"></i> registration</a></li>
+                            <li><a href="{{route('admin.login')}}"><i class="fas fa-sign-in-alt"></i> login</a></li>
                             @endif
                             
 

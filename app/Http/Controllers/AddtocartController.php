@@ -50,15 +50,19 @@ class AddtocartController extends Controller
     }
 
     
-    public function checkout()
+    public function checkout(Request $request)
     {
         // insert order data into order table- user_id, total
         $carts= session()->get('cart');
-//dd($carts);
+        //dd($carts);
         if($carts)
         {
             $order=Order::create([
                 'user_id'=>auth()->user()->id,
+                'name'=>$request->name,
+                'email'=>$request->email,
+                'mobile'=>$request->mobile,
+                'address'=>$request->address,
                 'total_price'=>array_sum(array_column($carts,'price')),
             ]);
 
@@ -79,6 +83,12 @@ class AddtocartController extends Controller
         return redirect()->back()->with('message','No Data found in cart.');
 
 
+    }
+
+    //billingaddress
+    public function billingaddress()
+    {
+        return view('website.pages.orderaddress');
     }
 
     // my_order

@@ -188,7 +188,7 @@
                                 <p>{{$tutorial->details}}</p>
                             </div>
                             <ul class="option-blog">
-                                <li><a href="{{$tutorial->link}}"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="{{$tutorial->link}}" target="_blank"><i class="fas fa-eye"></i></a></li>
                             </ul>
                         </div>
                     </div>

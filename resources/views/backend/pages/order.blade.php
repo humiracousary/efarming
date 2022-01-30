@@ -28,6 +28,7 @@
             <th scope="col">user name</th>
             <th scope="col">email</th>
             <th scope="col">phone number</th>
+            <th scope="col">address</th>
             <th scope="col">total price</th>
             <th scope="col">status</th>
             <th scope="col">action</th>
@@ -40,11 +41,12 @@
           <td>{{$data->user->name}}</td>
           <td>{{$data->user->email}}</td>
           <td>{{$data->user->mobile}}</td>
+          <td>{{$data->address}}</td>
           <td>{{$data->total_price}}</td>
           <td>{{$data->status}}</td>
           <td>
           <a href="{{route('order.view',$data->id)}}" class="btn btn-info">view</a>
-                 {{-- <a href="{{route('order.delete',$data->id)}}" class="btn btn-danger">Delete</a>  --}}
+                 <a href="{{route('order.delete',$data->id)}}" class="btn btn-danger">Delete</a> 
                 
                 <form action="{{route('order.update',$data->id)}}" method="post">
                     @csrf
