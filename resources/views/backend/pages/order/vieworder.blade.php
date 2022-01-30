@@ -3,37 +3,7 @@
 
 @section('content')
 
-{{-- <input style="float: right !important;" class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');"
-    value="Print">
 <div id="divToPrint">
-
-
-
-    <h4 style="text-align:center">View Details</h4>
-
-    <p><b>name: {{$order->user->name}}</b></p>
-    
-    <p><b>Email: {{$order->user->email}}</b></p>
-    <p><b>phone: {{($order->user->modile)}}</b></p>
-    {{-- <p><b>Status:{{($Orderdetails->status)}}</b></p> --}}
-    {{-- <p><b>Total: {{($order->total_price)}}</b></p>
-
-
-
-</div> --}}
-
-
-
-{{-- <script language="javascript">
-    function PrintDiv(divName) {
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-    }
-
-</script> --}} 
 
 <div class="container mt-5">
     <div class="d-flex justify-content-center row">
@@ -44,6 +14,8 @@
                     <div class="col-md-6">
                         <h1 class="text-uppercase">Invoice</h1>
                         <div class="billed"><span class="font-weight-bold text-uppercase">Billed:</span><span class="ml-1">{{$order->user->name}}</span></div>
+                        <div class="billed"><span class="font-weight-bold text-uppercase">Phone Number:</span><span class="ml-1">{{$order->user->mobile}}</span></div>
+                        <div class="billed"><span class="font-weight-bold text-uppercase">Address:</span><span class="ml-1">{{$order->address}}</span></div>
                         <div class="billed"><span class="font-weight-bold text-uppercase">Date:</span><span class="ml-1">{{$order->created_at}}</span></div>
                         <div class="billed"><span class="font-weight-bold text-uppercase">Order ID:</span><span class="ml-1">#0{{$order->id}}</span></div>
                     </div>
@@ -66,22 +38,38 @@
                                 @foreach ($order->orderDtails as $data )
                                 <tr>
                                     <td>{{$data->product->name}}</td>
-                                    <td>{{$data->unit_price}}</td>
+                                    <td>{{$data->unit_price}} BDT</td>
                                     <td>{{$data->quantity}}</td>
-                                    <td>{{$data->sub_total}}</td>
+                                    <td>{{$data->sub_total}} BDT</td>
                                 </tr>
                                 @endforeach
-                                <tr><td></td><td></td><td></td><td>Total{{$order->total_price}}</td></tr>
+                                <tr><td></td><td></td><td>Total:</td><td>{{$order->total_price}} BDT</td></tr>
+                                <tr><td></td><td></td><td>Dativary Charge:</td><td>60.00 BDT</td></tr>
                             </tbody>
                       
                         </table>
-                        
                     </div>
                 </div>
-                <div class="text-right mb-3"><button class="btn btn-danger btn-sm mr-5" type="button">Pay Now</button></div>
+               
             </div>
         </div>
     </div>
 </div>
+</div>
+<input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
 
 @endsection
+
+
+
+<script language="javascript">
+    function PrintDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+
+</script>
+

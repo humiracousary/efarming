@@ -80,13 +80,14 @@ Route::group(['middleware'=>'web_auth'],function (){
 Route::get('add_to_cart/{id}', [AddtocartController::class, 'addtocart'])->name('add.cart');
 Route::get('view/add_to_cart', [AddtocartController::class, 'viewcart'])->name('cart');
 Route::get('/clear-cart',[AddtocartController::class,'clearCart'])->name('cart.clear');
-Route::get('/checkout',[AddtocartController::class,'checkout'])->name('cart.checkout');
-});
+Route::post('/checkout',[AddtocartController::class,'checkout'])->name('cart.checkout');
+
+Route::get('billing/address', [AddtocartController::class, 'billingaddress'])->name('billing.address');
 
 //user_order_show
 Route::get('my_order', [AddtocartController::class,'myorder'])->name('my.oder');
 Route::get('my_order/view/{id}', [AddtocartController::class,'myorderview'])->name('my.oder.view');
-
+});
 
 
 //grouping

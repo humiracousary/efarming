@@ -66,7 +66,9 @@
 
         </table>
         <div>
-            <a href="{{route('cart.checkout')}}" class="btn btn-success mx-2">Checkout</a>
+            {{-- <a href="{{route('cart.checkout')}}" class="btn btn-success mx-2">Checkout</a> --}}
+            <a href="{{route('billing.address')}}" class="btn btn-success mx-2">chack out</a>
+
             <a href="{{route('cart.clear')}}" class="btn btn-danger mx-2">Clear Cart</a>
         </div>
 

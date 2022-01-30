@@ -16,6 +16,10 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
+            $table->text('name');
+            $table->string('email');
+            $table->string('mobile');
+            $table->string('address');
             $table->double('total_price',10,2)->default(0);
             $table->string('status')->default('pending');
             $table->timestamps();
