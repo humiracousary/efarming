@@ -25,7 +25,6 @@
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br> HK FARM</strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
                     </div>
                 </div>
@@ -36,20 +35,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br>HK FARM</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="text-center">
-                <img src="images/banner-03.jpg" alt="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> HK FARM</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>                            
                         </div>
                     </div>
                 </div>
@@ -145,8 +131,8 @@
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>{{$product->name}}</h4>
-                            <h5> {{$product->price}}</h5>
+                            <h4>Name: {{$product->name}}</h4>
+                            <h5>Price: {{$product->price}} BDT</h5>
                         </div>
                     </div>
                 </div> 

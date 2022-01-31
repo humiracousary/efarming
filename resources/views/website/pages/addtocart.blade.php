@@ -34,7 +34,18 @@
                 </td> --}}
                 <td>{{$cart['name']}}</td>
                 <td>{{$cart['price']}}</td>
-                <td>{{$cart['quantity']}}</td>
+
+                {{-- <td>{{$cart['quantity']}}</td> --}}
+
+                <td>
+                    <form action="{{route('quantity.update')}}" method="POST">
+                        @csrf
+                        <input type="hidden" value="{{$key}}" name="cart_id">
+                        <input value="{{$cart['quantity']}}" type="number" id="quantity" name="quantity">
+                        <input type="submit" value="Submit">
+                    </form>
+                </td>
+                
                 <td>{{(int)$cart['quantity'] * (int)$cart['price']}}</td>
             </tr>
 
@@ -66,10 +77,12 @@
 
         </table>
         <div>
-            {{-- <a href="{{route('cart.checkout')}}" class="btn btn-success mx-2">Checkout</a> --}}
+           
             <a href="{{route('billing.address')}}" class="btn btn-success mx-2">chack out</a>
 
             <a href="{{route('cart.clear')}}" class="btn btn-danger mx-2">Clear Cart</a>
+            
+            <a href="{{route('webhome')}}" class="btn btn-success mx-2">Continue Shoping</a>
         </div>
 
     </div>
