@@ -34,6 +34,29 @@ class AddtocartController extends Controller
         return redirect()->back()->with('message', 'Product Added to Cart.');
     }
 
+
+    //add to cart er quantity update er kaaaj
+
+    public function quantity_update(Request $request)
+    {
+  
+    $id = $request->input('cart_id');
+    $cart = session()->get('cart');
+
+    $product = Product::find($id);
+    // dd($product);
+    if ($product->quantity < $request->quantity) {
+        return redirect()->back();
+    }
+    else {
+        $cart[$id]['quantity'] = $request->quantity;
+        $cart[$id]['price']=$cart[$id]['price']*$request->quantity;
+        session()->put('cart',$cart);
+
+        return redirect()->back();
+    }
+    }
+
     public function viewcart()
     {
         $carts = session('cart');
@@ -54,7 +77,18 @@ class AddtocartController extends Controller
     {
         // insert order data into order table- user_id, total
         $carts= session()->get('cart');
-        //dd($carts);
+        // dd($carts);
+        // product decrising from the product table
+        
+        foreach ($carts as $key => $value) {
+            $product_id = $value['product_id'];
+            $quantity = $value['quantity'];
+            $product = Product::find($product_id);
+            $newQuantity = $product->quantity - $quantity;
+            $product->update([
+                'quantity'=>$newQuantity
+            ]);
+        }
         if($carts)
         {
             $order=Order::create([

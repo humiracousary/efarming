@@ -84,6 +84,8 @@ Route::post('/checkout',[AddtocartController::class,'checkout'])->name('cart.che
 
 Route::get('billing/address', [AddtocartController::class, 'billingaddress'])->name('billing.address');
 
+Route::post('add_to_cart/update_quantity', [AddtocartController::class, 'quantity_update'])->name('quantity.update');
+
 //user_order_show
 Route::get('my_order', [AddtocartController::class,'myorder'])->name('my.oder');
 Route::get('my_order/view/{id}', [AddtocartController::class,'myorderview'])->name('my.oder.view');
@@ -161,11 +163,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], functi
 
     Route::get('event/delete/{id}', [EventController::class, 'eventdelete'])->name('event.delete');
 
-
-    //stock
-    Route::get('stock/list', [StockController::class, 'stocklist'])->name('stock.list');
-    Route::get('stock/form', [StockController::class, 'form'])->name('stock.form');
-    Route::post('stock/add', [StockController::class, 'add'])->name('stock.add');
 
     //contact
     Route::get('contact', [ContactController::class, 'contact'])->name('contact.list');

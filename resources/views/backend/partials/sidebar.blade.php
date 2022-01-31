@@ -33,13 +33,7 @@
                         <span class="hide-menu">Category</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('stock.list')}}"
-                        aria-expanded="false">
-                        <i class="fab fa-stack-overflow" aria-hidden="true"></i>
-                        <span class="hide-menu">stocks</span>
-                    </a>
-                </li>
+                
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('order')}}"
                         aria-expanded="false">
