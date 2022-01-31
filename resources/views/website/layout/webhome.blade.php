@@ -145,8 +145,8 @@
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>{{$product->name}}</h4>
-                            <h5> {{$product->price}}</h5>
+                            <h4>Name: {{$product->name}}</h4>
+                            <h5>Price: {{$product->price}} BDT</h5>
                         </div>
                     </div>
                 </div> 
