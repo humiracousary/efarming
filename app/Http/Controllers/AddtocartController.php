@@ -20,12 +20,15 @@ class AddtocartController extends Controller
 
             $cart[$data->id]['quantity']++;
             $cart[$data->id]['total_price'] = $cart[$data->id]['quantity'] * $cart[$data->id]['price'];
+            // $cartData[$id]['sub_total'] = $cartData[$id]['quantity'] * $cartData[$id]['price'];
         } else {
             $cart[$data->id] = [
                 'name' => $data->name,
                 'product_id' => $data->id,
                 'price' => $data->price,
                 'quantity' => 1,
+                'sub_total' => $data->price * 1
+
             ];
         }
 
@@ -42,19 +45,26 @@ class AddtocartController extends Controller
   
     $id = $request->input('cart_id');
     $cart = session()->get('cart');
+    // dd($cart);
 
     $product = Product::find($id);
+
     // dd($product);
     if ($product->quantity < $request->quantity) {
         return redirect()->back();
     }
     else {
         $cart[$id]['quantity'] = $request->quantity;
-        $cart[$id]['price']=$cart[$id]['price']*$request->quantity;
+        $cart[$id]['total_price']=$cart[$id]['price']*$request->quantity;
         session()->put('cart',$cart);
+        // dd($cart);
 
         return redirect()->back();
     }
+
+    
+
+    
     }
 
     public function viewcart()
@@ -79,7 +89,7 @@ class AddtocartController extends Controller
         $carts= session()->get('cart');
         // dd($carts);
         // product decrising from the product table
-        
+
         foreach ($carts as $key => $value) {
             $product_id = $value['product_id'];
             $quantity = $value['quantity'];
@@ -97,7 +107,7 @@ class AddtocartController extends Controller
                 'email'=>$request->email,
                 'mobile'=>$request->mobile,
                 'address'=>$request->address,
-                'total_price'=>array_sum(array_column($carts,'price')),
+                'total_price'=>array_sum(array_column($carts,'total_price')),
             ]);
 
             // insert details into order details table
