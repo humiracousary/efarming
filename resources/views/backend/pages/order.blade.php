@@ -4,7 +4,8 @@
 <h1><b>order</b></h1>
 
 <div>
-  <form action="{{route('order')}}">
+  <form action="{{route('filter.order')}}" method="post">
+    @csrf
       <div class="input-group rounded mt-3 mb-2">
           <input type="date" class="form-control rounded" name="from_date" placeholder="Search" aria-label="Search"
                  aria-describedby="search-addon" />

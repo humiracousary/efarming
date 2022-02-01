@@ -134,6 +134,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], functi
 
     //order
     Route::get('order', [OrderController::class, 'order'])->name('order');
+    Route::post('/filter/order',[OrderController::class,'filter'])->name('filter.order');
 
 
     Route::get('order/view/{id}', [OrderController::class, 'vieworder'])->name('order.view');;
