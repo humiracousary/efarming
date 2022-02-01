@@ -38,5 +38,16 @@ class TutorialController extends Controller
         return redirect()->back();
         
     }
+    
+    public function tutorialdelete($id)
+   {
+        $data = Tutorial::find($id);
+
+        if ($data)
+         {
+          $data->delete();
+          return redirect()->back();
+         }    
+    }
 
 }

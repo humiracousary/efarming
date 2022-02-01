@@ -156,6 +156,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], functi
     Route::get('tutorial/list', [TutorialController::class, 'tutoriallist'])->name('tutorial.list');
     Route::post('tutotial/add', [TutorialController::class, 'add'])->name('tutotial.add');
 
+    Route::get('tutorial/delete /{id}', [TutorialController::class, 'tutorialdelete'])->name('tutorial.delete');
+
 
     //event
     Route::get('event/add', [EventController::class, 'addevent'])->name('add.event');

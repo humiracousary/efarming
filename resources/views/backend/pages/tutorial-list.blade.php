@@ -21,6 +21,7 @@
                     <th scope="col">description</th>
                     <th scope="col">link</th>
                     <th scope="col">image</th>
+                    <th scope="col">action</th>
                   </tr>
                 </thead>
                 @foreach($tutorial as $key=>$data)
@@ -32,6 +33,10 @@
                   <td>
                     <img width="100px" src="{{url('uploads/'.$data->image)}}" alt="product image">
                   </td>
+                  <td>
+                  <a href="{{route('tutorial.delete',$data->id)}}" class="btn btn-primary">delete</a>
+                  </td>
+
                     
                   </tr>
                   @endforeach

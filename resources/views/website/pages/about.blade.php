@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="container">
 <h1>what drives us</h1><br><br>
 <p>empowering thousands of people to start growing and eating their own food
 green, clean, beautiful cities
@@ -25,6 +26,6 @@ green is good for all of us</p>
 
 <h3>responsibility</h3><br>
 <p>everything we do has an impact on mother nature. we take that responsibility seriously, and give back for everything we take. wherever possible, we give back much more than we take.</p>
-
+</div>
 @endsection
 
