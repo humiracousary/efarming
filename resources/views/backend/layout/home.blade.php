@@ -80,14 +80,14 @@
                         <p> Number of Product </p>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <i class="fas fa-seedling" aria-hidden="true"></i>
                     </div>
-                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    {{-- <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a> --}}
                 </div>
             </div>
 
             <div class="col-lg-3 col-sm-6">
-                <div class="card-box bg-green">
+                <div class="card-box bg-success">
                     <div class="inner">
                          <h3> {{$count['order']}} </h3> 
                         <p> Total Order </p>
@@ -95,21 +95,45 @@
                     <div class="icon">
                         <i class="fa fa-money" aria-hidden="true"></i>
                     </div>
-                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    {{-- <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a> --}}
                 </div>
             </div>
-            {{-- <div class="col-lg-3 col-sm-6">
-                <div class="card-box bg-orange">
+             <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-secondary">
                     <div class="inner">
-                        <h3> {{$count['customer']}} </h3>
-                        <p> Total Customer </p>
+                        <h3> {{$count['category']}} </h3>
+                        <p> Total Category </p>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <i class="fas fa-i-cursor" aria-hidden="true"></i>
                     </div>
-                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    {{-- <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a> --}}
                 </div>
-            </div> --}}
+            </div> 
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-danger">
+                    <div class="inner">
+                        <h3> {{$count['event']}} </h3>
+                        <p> Total Event </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                    </div>
+                    {{-- <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a> --}}
+                </div>
+            </div> 
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-orange">
+                    <div class="inner">
+                        <h3> {{$count['tutorial']}} </h3>
+                        <p> Total Tutorial </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-fan" aria-hidden="true"></i>
+                    </div>
+                    {{-- <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a> --}}
+                </div>
+            </div> 
         </div>
     </div>
     

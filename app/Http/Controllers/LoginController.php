@@ -54,6 +54,7 @@ class LoginController extends Controller
 
     public function dologout()
     {
+        session()->forget('cart');
         Auth::logout();
         return redirect()->route('webhome')->with('message', 'Logging out.');
     }

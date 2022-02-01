@@ -58,9 +58,9 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('about.farm')}}">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('events')}}">Event</a></li>
 
-                        <li class="nav-item"><a class="nav-link" href="about.html">offer</a></li>
+                        {{-- <li class="nav-item"><a class="nav-link" href="about.html">offer</a></li> --}}
                         <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">My Order</a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{route('my.oder')}}">Shop Detail</a></li>
                                 {{-- <li><a href="my-account.html">My Account</a></li>
