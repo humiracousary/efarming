@@ -85,6 +85,7 @@ class AddtocartController extends Controller
     
     public function checkout(Request $request)
     {
+        // dd($request->all());
         // insert order data into order table- user_id, total
         $carts= session()->get('cart');
         // dd($carts);
@@ -122,9 +123,9 @@ class AddtocartController extends Controller
                 ]);
             }
             session()->forget('cart');
-            return redirect()->back()->with('message','Order Placed Successfully.');
+            return redirect()->back()->with('success','Order Placed Successfully.');
         }
-        return redirect()->back()->with('message','No Data found in cart.');
+        return redirect()->back()->with('success','No Data found in cart.');
 
 
     }

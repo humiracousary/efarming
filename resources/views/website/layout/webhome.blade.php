@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br> HK FARM</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                            <p class="m-b-40">We are trying to provide our best service for our customer. <br> Our foods are totally organics.</p>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br>HK FARM</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>                            
+                            <p class="m-b-40">We are trying to provide our best service for our customer. <br>Our foods are totally organics.</p>                            
                         </div>
                     </div>
                 </div>
@@ -74,22 +74,7 @@
     </div>
     <!-- End Categories -->
 	
-	{{-- <div class="box-add-products">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<div class="offer-box-products">
-						<img class="img-fluid" src="images/add-img-01.jpg" alt="" />
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<div class="offer-box-products">
-						<img class="img-fluid" src="images/add-img-02.jpg" alt="" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>  --}}
+
 
 
 
@@ -99,8 +84,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>Fruits & Vegetables</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                        <h1>(Our Products) Fruits & Vegetables</h1>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -122,8 +107,8 @@
                             <div class="mask-icon">
                                 <ul>
                                     <li><a href="{{route('view.singleproduct',$product->id)}}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                    {{-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li> --}}
+                                    {{-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> --}}
                                 </ul>
                                 <a class="cart" href="{{route('add.cart',$product->id)}}">Add to Cart</a>
                             </div>

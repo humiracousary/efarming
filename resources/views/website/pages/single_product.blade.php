@@ -3,23 +3,16 @@
 @section('content')
 
 
-<div class="col-lg-3 col-md-6 special-grid best-seller">
-    <div class="products-single fix">
-        <div class="box-img-hover">
-            <div class="type-lb">
-                <p class="sale">Sale</p>
-            </div>
-            <img style="height: 200px" src="{{url('uploads/',$product->image)}}" class="img-fluid" alt="Image">
-            <div class="mask-icon">
-                
-                <a class="cart" href="#">Add to Cart</a>
-            </div>
-        </div>
-        <div class="why-text">
-            <h4>{{$product->name}}</h4>
-            <h5> {{$product->price}}</h5>
-        </div>
+<div id="divToPrint">
+    <h1>Product Details</h1>
+    <div class="container-fluid">
+        
+        <p>Product Name: {{$product->name}}</p><br>
+        <p>Product price: {{$product->price}} BDT</p><br>
+        <p>Product Quantity: {{$product->quantity}} KG</p><br>
+        <p>Product Image: <img width="200px" src="{{url('uploads/'.$product->image)}}" alt="product image"></p>
     </div>
-</div> 
+</div>
+
 
 @endsection
