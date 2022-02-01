@@ -61,4 +61,20 @@ class OrderController extends Controller
         return view('admin.order.order-cancelled',compact('cancelled'));
         
     }
+
+    public function filter(Request $request)
+    {
+        $from = $request->from_date;
+        // dd($from);
+        $to = $request->to_date;
+
+
+        if($from && $to)
+        {
+            $order = Order::whereBetween('created_at',[$from,$to])->get();
+        //    dd($order);
+            return view('backend.pages.order',compact('order'));
+        }
+
+    } 
 }
