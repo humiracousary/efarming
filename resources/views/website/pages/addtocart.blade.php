@@ -77,10 +77,16 @@
 
         </table>
         <div>
-           
+           @if ($carts)
             <a href="{{route('billing.address')}}" class="btn btn-success mx-2">chack out</a>
-
             <a href="{{route('cart.clear')}}" class="btn btn-danger mx-2">Clear Cart</a>
+            @else
+                        <p>
+                            <h1>Please Order First</h1>
+                        </p>
+                        @endif
+
+            
             
             <a href="{{route('webhome')}}" class="btn btn-success mx-2">Continue Shoping</a>
         </div>
