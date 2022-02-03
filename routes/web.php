@@ -92,6 +92,7 @@ Route::get('my_order/view/{id}', [AddtocartController::class,'myorderview'])->na
 });
 
 
+
 //grouping
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], function () {
 

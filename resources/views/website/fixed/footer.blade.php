@@ -19,9 +19,9 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-top-box">
                         <h3>Social Media</h3>
-                        <p>farming is fun...hk farm is our pround...</p>
+                        <p>Farming is fun...HK Farm is our pround...</p>
                         <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=100009963649391"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100009963649391" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                             <!--<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>-->
                            <!-- <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>-->
                            <!-- <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
@@ -42,30 +42,20 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
-                   <!-- <div class="footer-link">
-                        <h4>Information</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Delivery Information</a></li>
-                        </ul>
-                    </div>-->
+                
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-link-contact">
                         <h4>Contact Us</h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Mazumpur,kushtia,Dhaka<br> kushtia 7000 </p>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Purbo Mazumpur,Kushtia,Dhaka<br> Kushtia 7000 </p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+88 018 34587000</a></p>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+8801834587000</a></p>
                             </li>
                             <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">hkopola33@gmail.com</a></p>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">hk@gmail.com</a></p>
                             </li>
                         </ul>
                     </div>

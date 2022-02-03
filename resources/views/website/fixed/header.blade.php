@@ -22,13 +22,13 @@
                             @endauth
                             </a>
                             </li>
-                            <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
+                            <li><a href="{{route('location.mylocation')}}"><i class="fas fa-location-arrow"></i> Our Location</a></li>
                     
                             @if(auth()->user())
-                            <li><a href="{{route('user.logout')}}"><i class="fas fa-sign-out-alt"></i> log out</a></li>
+                            <li><a href="{{route('user.logout')}}"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                             @else
-                            <li><a href="{{route('do.registration')}}"><i class="fas fa-user-plus"></i> registration</a></li>
-                            <li><a href="{{route('admin.login')}}"><i class="fas fa-sign-in-alt"></i> login</a></li>
+                            <li><a href="{{route('do.registration')}}"><i class="fas fa-user-plus"></i> Registration</a></li>
+                            <li><a href="{{route('admin.login')}}"><i class="fas fa-sign-in-alt"></i> LogIn</a></li>
                             @endif
                             
 
@@ -75,7 +75,7 @@
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        {{-- <li class="search"><a href="#"><i class="fa fa-search"></i></a></li> --}}
                         <li class="side-menu">
                             <a href="{{route('cart')}}">
                                 <i class="fa fa-shopping-bag"></i>
@@ -86,12 +86,7 @@
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
-            </div>
-
-
-
-
-            
+            </div>    
         </nav>
 
         <!-- End Navigation -->

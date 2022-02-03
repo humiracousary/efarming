@@ -16,12 +16,12 @@
             <div class="col-sm-8"> <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">description</th>
-                    <th scope="col">link</th>
-                    <th scope="col">image</th>
-                    <th scope="col">action</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Link</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
                   </tr>
                 </thead>
                 @foreach($tutorial as $key=>$data)
@@ -34,7 +34,7 @@
                     <img width="100px" src="{{url('uploads/'.$data->image)}}" alt="product image">
                   </td>
                   <td>
-                  <a href="{{route('tutorial.delete',$data->id)}}" class="btn btn-primary">delete</a>
+                  <a href="{{route('tutorial.delete',$data->id)}}" class="btn btn-primary">Delete</a>
                   </td>
 
                     

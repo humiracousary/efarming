@@ -13,7 +13,7 @@ class AddtocartController extends Controller
     {
 
         $data = Product::find($id);
-
+        // @dd($data);
         $cart = session()->has('cart') ? session()->get('cart') : [];
 
         if (array_key_exists($data->id, $cart)) {
@@ -27,8 +27,8 @@ class AddtocartController extends Controller
                 'product_id' => $data->id,
                 'price' => $data->price,
                 'quantity' => 1,
-                'sub_total' => $data->price * 1
-
+                'sub_total' => $data->price * 1,
+                'total_price'=>$data->price
             ];
         }
 
@@ -133,6 +133,7 @@ class AddtocartController extends Controller
     //billingaddress
     public function billingaddress()
     {
+        // dd(session('cart'));
         return view('website.pages.orderaddress');
     }
 

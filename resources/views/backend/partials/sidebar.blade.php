@@ -19,18 +19,20 @@
                         <span class="hide-menu">user</span>
                     </a>
                 </li>-->
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('product.list')}}"
-                        aria-expanded="false">
-                        <i class="fas fa-seedling" aria-hidden="true"></i>
-                        <span class="hide-menu">product</span>
-                    </a>
-                </li>
+                
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('category.list')}}"
                         aria-expanded="false">
                         <i class="fas fa-i-cursor" aria-hidden="true"></i>
                         <span class="hide-menu">Category</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('product.list')}}"
+                        aria-expanded="false">
+                        <i class="fas fa-seedling" aria-hidden="true"></i>
+                        <span class="hide-menu">Product</span>
                     </a>
                 </li>
                 
@@ -53,14 +55,14 @@
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('tutorial.list')}}"
                         aria-expanded="false">
                         <i class="fa fa-columns" aria-hidden="true"></i>
-                        <span class="hide-menu">tutorial</span>
+                        <span class="hide-menu">Tutorial</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('contact.list')}}"
                         aria-expanded="false">
                         <i class="fas fa-id-card" aria-hidden="true"></i>
-                        <span class="hide-menu">contact</span>
+                        <span class="hide-menu">Contact</span>
                     </a>
                 </li>
                

@@ -17,10 +17,11 @@
                 <thead>
 
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">details</th> 
-                    <th scope="col">image</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Details</th> 
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
                   </tr>
                 </thead>
 
@@ -36,7 +37,7 @@
                     <td> 
                       {{-- <a href="{{route('product.edit',$data->id)}}" class="btn btn-primary">edit</a>
                       <a href="{{route('product.view',$data->id)}}" class="btn btn-primary">view</a> --}}
-                       <a href="{{route('category.delete',$data->id)}}" class="btn btn-primary">delete</a>
+                       <a href="{{route('category.delete',$data->id)}}" class="btn btn-primary">Delete</a>
                  </td>
 
                   </tr>
