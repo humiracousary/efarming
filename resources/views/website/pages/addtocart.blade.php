@@ -5,6 +5,7 @@
 
 <div class="container my-5">
     <h1 style="padding-top: 100px;">My Cart ({{session()->has('cart') ? count(session()->get('cart')):0}})</h1>
+    <P><h4>Only cash on dalivary is available.</h4></p>
 
     <div class="row">
         <div class="col-md-4"></div>
@@ -16,11 +17,10 @@
 
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    {{-- <th scope="col">Image</th> --}}
+                    <th scope="col">Id</th>
                     <th scope="col">Name</th>
-                    <th scope="col">price</th>
-                    <th scope="col">quantity</th>
+                    <th scope="col">price (per kg)</th>
+                    <th scope="col">quantity (kg)</th>
                     <th scope="col">SubTotal</th>
                 </tr>
             </thead>
@@ -33,7 +33,7 @@
           <img width="100px" src="{{url('uploads/product/'.$cart['image'])}}" alt="">
                 </td> --}}
                 <td>{{$cart['name']}}</td>
-                <td>{{$cart['price']}}</td>
+                <td>{{$cart['price']}} BDT</td>
 
                 {{-- <td>{{$cart['quantity']}}</td> --}}
 
@@ -46,7 +46,7 @@
                     </form>
                 </td>
                 
-                <td>{{(int)$cart['quantity'] * (int)$cart['price']}}</td>
+                <td>{{(int)$cart['quantity'] * (int)$cart['price']}} BDT</td>
             </tr>
 
             @php
@@ -64,7 +64,7 @@
                     <div>
                         @if ($carts)
                         <p>
-                            <h1>Total={{ $total }}</h1>
+                            <h1>Total= {{ $total }} BDT</h1>
                         </p>
                         @else
                         <p>

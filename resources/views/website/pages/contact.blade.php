@@ -52,6 +52,7 @@
   <div style="text-align:center">
     <br>
     <h1>Contact Us</h1>
+    <p><h3>If you need any kind of query or help please contact with us.Thank you.</h3></p>
   </div>
   <div class="row">
     
@@ -67,6 +68,10 @@
           <option value="Dhaka">Dhaka</option>
           <option value="Khulna">Khulna</option>
           <option value="Rajshahi">Rajshsahi</option>
+          <option value="Rajshahi">Mymenshing</option>
+          <option value="Rajshahi">Sylet</option>
+          <option value="Rajshahi">Rangpur</option>
+          <option value="Rajshahi">Chittagang</option>
         </select>
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>

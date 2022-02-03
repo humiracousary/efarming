@@ -25,14 +25,14 @@
     <div class="col-sm-8"> <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">user name</th>
-            <th scope="col">email</th>
-            <th scope="col">phone number</th>
-            <th scope="col">address</th>
-            <th scope="col">total price</th>
-            <th scope="col">status</th>
-            <th scope="col">action</th>
+            <th scope="col">Id</th>
+            <th scope="col">User_Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone_Number</th>
+            <th scope="col">Address</th>
+            <th scope="col">Total_Price</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
             
           </tr>
         </thead>

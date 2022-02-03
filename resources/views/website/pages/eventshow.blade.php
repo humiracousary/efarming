@@ -10,13 +10,13 @@
             <div class="col-sm-8"> <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">event name</th>
-                    <th scope="col">description</th>
-                    <th scope="col">place</th>
-                    <th scope="col">date</th>
-                    <th scope="col">time</th>
-                    <th scope="col">action</th>
+                    <th scope="col">Event_id</th>
+                    <th scope="col">Event Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Place</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Action</th>
 
                   </tr>
                 </thead>

@@ -139,8 +139,8 @@
                 
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>latest blog</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                        <h1>Latest Blog</h1>
+                        <p></p>
                     </div>
                 </div>
             </div>

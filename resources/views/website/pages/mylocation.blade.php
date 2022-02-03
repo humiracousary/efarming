@@ -2,9 +2,6 @@
 
 @section('content')
 
-
-
-
 <div class="et_pb_column et_pb_column_1_3 et_pb_column_26  et_pb_css_mix_blend_mode_passthrough">
 				
 				
@@ -21,5 +18,6 @@
 
     <div class="et_pb_text_inner"><p style="text-align: left;"><span style="font-size: large;"><strong>For queries</strong></span><br />hkopola33@gmail.com<br />+88 01834587000, +88 01317248863</p>
       <p style="text-align: left;">PURBO MAZUMPUR KUSHTIA-7000,KHULNA,BANGLADEND</p></div>
+
 
 @endsection

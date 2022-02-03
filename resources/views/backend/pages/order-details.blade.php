@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
 
-<h1><b>order details</b></h1>
+<h1><b>Order Details</b></h1>
 
 <div class="container-fluid">
     <div class="row">
@@ -9,12 +9,12 @@
         <div class="col-sm-8"> <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">oder_id</th>
-                <th scope="col">product_id</th>
-                <th scope="col">price</th>
-                <th scope="col">quantity</th>
-                <th scope="col">sub_total</th>
+                <th scope="col">Id</th>
+                <th scope="col">Oder_id</th>
+                <th scope="col">Product_id</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Sub_Total</th>
 
 
 
@@ -26,10 +26,10 @@
               <th scope="row">{{$key+1}}</th>
               <td>{{$data->order->id}}</td>
               <td>{{$data->product->id}}</td>
-              <td>{{$data->product->price}}</td>
+              <td>{{$data->product->price}} BDT</td>
               <td>{{$data->quantity}}</td>
 
-              <td>{{$data->sub_total}}</td>
+              <td>{{$data->sub_total}} BDT</td>
               </tr>
               @endforeach
           </table></div>

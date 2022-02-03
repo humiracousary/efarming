@@ -16,7 +16,7 @@
 @endif
 
 
-<h1><b>please put your details for confirming your order</b></h1>
+<h1><b>Please put your details for confirming your orders.</b></h1>
 
 <div class="container-fluid">
     <form action="{{route('cart.checkout')}}" method="POST" enctype="multipart/form-data">
@@ -34,7 +34,7 @@
                 <input value="{{auth()->user()->mobile}}" type="text" class="form-control" id="exampleInputPassword1" placeholder="mobile" name="mobile">
                 </div>
         <div class="checkout__input">
-            <label for="exampleInputPassword1">address</label>
+            <label for="exampleInputPassword1">Address</label>
             <input type="text" class="form-control" id="exampleInputPassword1" placeholder="address" name="address">
         </div>
         
